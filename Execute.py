@@ -1,0 +1,222 @@
+import Store
+
+from time import sleep
+
+
+import datetime
+from api_helper import ShoonyaApiPy
+import os
+
+
+# application callbacks
+
+
+def event_handler_order_update(message):
+    print("order event: " + str(message))
+
+
+def event_handler_quote_update(message):
+    if (Var["Type"] == "Intraday"):
+        Type = "I"
+    else:
+        Type = "M"
+
+    if ('lp' in message):
+        print(message['lp'])
+
+    if ((Store.status1 == "Executed Straddle" or Store.status1 == "PE SL HIT") and Var["SLType"] == "Trailing" and 'lp' in message and message['tk'] == Store.token['CE'] and float(message['lp']) <= Store.Price['CE']-10):
+        print("Trailing CE SL")
+        Store.Price["CE"] = Store.Price["CE"]-10
+        Store.stopLoss["CE"] = Store.stopLoss["CE"]-7
+
+        SlQty = Var["Qty"]
+
+        if (Store.status1 == "PE SL HIT"):
+            while (SlQty > 1800):
+                xd.modify_order(exchange='NFO', tradingsymbol=Store.strike['CE'], orderno=Store.orderno1['CE'],
+                                newquantity=1800, newprice_type='SL-LMT', newprice=Store.stopLoss['CE']+4,
+                                newtrigger_price=Store.stopLoss['CE'])
+                SlQty = SlQty-1800
+
+            if (SlQty > 0):
+                xd.modify_order(exchange='NFO', tradingsymbol=Store.strike['CE'], orderno=Store.orderno1['CE'],
+                                newquantity=SlQty, newprice_type='SL-LMT', newprice=Store.stopLoss['CE']+4,
+                                newtrigger_price=Store.stopLoss['CE'])
+
+    if ((Store.status1 == "Executed Straddle" or Store.status1 == "CE SL HIT") and Var["SLType"] == "Trailing" and 'lp' in message and message['tk'] == Store.token['PE'] and float(message['lp']) <= Store.Price['PE']-10):
+        Store.Price["PE"] = Store.Price["PE"]-10
+        Store.stopLoss["PE"] = Store.stopLoss["PE"]-7
+        SlQty = Var["Qty"]
+
+        while (SlQty > 1800):
+
+            if (Store.status1 == "CE SL HIT"):
+                xd.modify_order(exchange='NFO', tradingsymbol=Store.strike['PE'], orderno=Store.orderno1['PE'],
+                                newquantity=1800, newprice_type='SL-LMT', newprice=Store.stopLoss['PE']+4,
+                                newtrigger_price=Store.stopLoss['PE'])
+                SlQty = SlQty-1800
+                if (SlQty > 0):
+                    xd.modify_order(exchange='NFO', tradingsymbol=Store.strike['PE'], orderno=Store.orderno1['PE'],
+                                    newquantity=SlQty, newprice_type='SL-LMT', newprice=Store.stopLoss['PE']+4,
+                                    newtrigger_price=Store.stopLoss['PE'])
+        print("Trailing PE SL")
+
+    if (Store.status1 == "Executed Straddle" and 'lp' in message and message['tk'] == Store.token['CE'] and float(message['lp']) >= Store.stopLoss['CE']):
+
+        if (Var["SLType"] == "TrailToCost"):
+            Store.stopLoss = Store.Price
+
+        # print("CE: ", message['lp'])
+        print(message['lp'])
+        print("CE sl Hit")
+        if (Store.status == "PE SL HIT"):
+            Store.status1 = False
+
+        else:
+            SlQty = Var["Qty"]
+            while (Var["HedgeQty"] > 1800):
+
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['hedgePE'],
+                                     quantity=1800, discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 Hedge PE BUY')
+                Var["HedgeQty"] = Var["HedgeQty"]-1800
+
+            if (Var["HedgeQty"] > 0):
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['hedgePE'],
+                                     quantity=Var["HedgeQty"], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 Hedge PE BUY')
+
+            while (SlQty > 1800):
+                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
+                                     quantity=1800, discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 PE SELL')
+                SlQty = SlQty-1800
+
+            if (SlQty > 0):
+                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
+                                     quantity=Var["Qty"], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 PE SELL')
+
+            SlQty = Var["Qty"]
+            while (SlQty > 1800):
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
+                                     quantity=1800, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
+                                     trigger_price=Store.stopLoss['PE'],
+                                     retention='DAY', remarks='9:45 PE SL')
+                SlQty = SlQty-1800
+            if (SlQty > 0):
+
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
+                                     quantity=SlQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
+                                     trigger_price=Store.stopLoss['PE'],
+                                     retention='DAY', remarks='9:45 PE SL')
+
+            Store.status1 = "CE SL HIT"
+
+    if (Store.status1 == "Executed Straddle" and 'lp' in message and message['tk'] == Store.token['PE'] and float(message['lp']) >= Store.stopLoss['PE']):
+        # print("PE: ", message['lp'])
+        print("PE sl Hit")
+        if (Var["SLType"] == "TrailToCost"):
+            Store.stopLoss = Store.Price
+
+        print(message['lp'])
+        if (Store.status == "CE SL HIT"):
+            Store.status1 = False
+
+        else:
+            SlQty = Var["Qty"]
+            while (Var["HedgeQty"] > 1800):
+
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['hedgeCE'],
+                                     quantity=1800, discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 Hedge CE BUY')
+                Var["HedgeQty"] = Var["HedgeQty"]-1800
+
+            if (Var["HedgeQty"] > 0):
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['hedgeCE'],
+                                     quantity=Var["HedgeQty"], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 Hedge CE BUY')
+
+            while (SlQty > 1800):
+                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
+                                     quantity=1800, discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 CE SELL')
+                SlQty = Var["Qty"]-1800
+
+            if (SlQty > 0):
+                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
+                                     quantity=Var["Qty"], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 CE SELL')
+            SlQty = Var["Qty"]
+            while (SlQty > 1800):
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
+                                     quantity=1800, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
+                                     trigger_price=Store.stopLoss['CE'],
+                                     retention='DAY', remarks='9:45 CE SL')
+                SlQty = SlQty-1800
+            if (SlQty > 0):
+
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
+                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
+                                     quantity=SlQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
+                                     trigger_price=Store.stopLoss['CE'],
+                                     retention='DAY', remarks='9:45 CE SL')
+
+        Store.status1 = "PE SL HIT"
+
+
+def open_callback():
+    socket_opened = True
+
+    print('app is connected')
+
+    xd.subscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
+
+# end of callbacks
+
+
+def sl(api, Variables):
+    global Var
+    Var = Variables
+    global socket_opened
+    socket_opened = True
+    global xd
+    xd = api
+
+    print(Store.token)
+
+    xd.start_websocket(order_update_callback=event_handler_order_update,
+                       subscribe_callback=event_handler_quote_update, socket_open_callback=open_callback)
+
+    while True:
+
+        now = datetime.datetime.now()
+
+        while True:
+            os.system('cls')
+            print(Variables["Name"])
+            print(now.hour, ":", now.minute, ":", now.second)
+            print(Store.status)
+            print("StopLoss:", Store.stopLoss)
+            print("Price:", Store.Price)
+            sleep(1)
+            break
