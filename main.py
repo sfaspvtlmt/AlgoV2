@@ -1,7 +1,6 @@
 from os import system
 from api_helper import ShoonyaApiPy
-import Variables
-import Cred
+
 import time
 import datetime
 import Script
@@ -31,4 +30,3 @@ def Main(Variables, Cred):
             Script.Search(api, Variables)
 
 
-Main(Variables.MyAccount, Cred.MyAccount)

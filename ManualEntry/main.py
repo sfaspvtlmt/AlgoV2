@@ -23,3 +23,6 @@ def Main(Variables, Cred):
     print(Variables["Name"])
 
     Script.Search(api, Variables)
+
+
+Main(Variables.Riyaaz2, Cred.Riyaaz2)

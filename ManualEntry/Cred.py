@@ -22,7 +22,7 @@ MyAccount ={
 
 }
 
-Riyaaz2 = {
+Riyaaz1= {
 "user" : "FA85815",
 "pwd" : "1234@Asdf",
 "factor2" : pyotp.TOTP('VR5G3423UKO3K2D6D55M7663X2426HD6').now(),
@@ -30,7 +30,7 @@ Riyaaz2 = {
 "app_key" : "aba452a34c49e95cea1a08aeec75ad40",
 "imei" : "abc1234",
 }
-Riyaaz3 = {
+Riyaaz2 = {
 "user" : "FA97700",
 "pwd" : "1234@Asdf",
 "factor2" : pyotp.TOTP('366WU2KCCM3X53RHI4HET4DY73THVIV2').now(),

@@ -5,37 +5,38 @@ import subprocess
 import os
 import datetime
 import Variables
+import Store
 import Cred
 # schedule task for execution of secondfile every tuesday using os.startswith()
 
 
-# def Monday():
-#     print("IN BC")
-#     os.startfile(
-#         r'C:\Users\Arush Sarna\Documents\GitHub\Algo-Manage\secondfile.py')
+def start():
+    print("Monday ON")
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\MyAccount\run.py')
+    time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee\run.py')
+    time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Riyaaz2\run.py')
+    time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Riyaaz1\run.py')
+    time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Riyaaz3\run.py')
+    time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee2\run.py')
 
 
-# def main():
-#     print("Done")
-#     # call(["start python", "{}".format('/Users/arush/Documents/algo/Algo-Manage/secondfile.py')],
-#     #      shell=True)
-#     os.startfile(r'C:\Users\arush\Documents\algo\Algo-Manage\secondfile.py')
 
 
-# def not_main():
-#     print("not done")
 
+schedule.every().monday.at("09:31").do(start)
+schedule.every().tuesday.at("09:31").do(start)
+schedule.every().wednesday.at("09:38").do(start)
+schedule.every().thursday.at("09:40").do(start)
+# schedule.every().sunday.at("11:59").do(Thursday)
 
-# # schedule.every(2).seconds.do(Monday)
-# schedule.every().tuesday.at("9:15").do(Monday)
-
-# while 1:
-#     now = datetime.datetime.now()
-#     os.system('cls')
-
-#     print(now.hour, ":", now.minute, ":", now.second)
-#     schedule.run_pending()
-#     time.sleep(1)
-
-import main
-main.Main()
+while 1:
+    now = datetime.datetime.now()
+    os.system('cls')
+    print(now.hour, ":", now.minute, ":", now.second)
+    time.sleep(1)
+    schedule.run_pending()

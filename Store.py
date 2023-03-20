@@ -17,7 +17,7 @@ stopLoss = {
 status = "Waiting For Execution"
 
 status1 = "Not Executed"
-
+atmStrike = 0
 
 orderno1 = {
     'CE': None,

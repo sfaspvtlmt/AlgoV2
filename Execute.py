@@ -263,6 +263,8 @@ def sl(api, Variables):
             print(Variables["Name"])
             print(now.hour, ":", now.minute, ":", now.second)
             print(Store.status)
+            print(Store.atmStrike)
+            print(Var["Index"])
             print("StopLoss:", Store.stopLoss)
             print("Price:", Store.Price)
             sleep(1)
