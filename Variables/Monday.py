@@ -38,7 +38,7 @@ Riyaaz2 = {
     "HedgeQty": 2360,
     "Qty": 1800,
     "Hour": 10,
-    "Min": 30,
+    "Min": 37,
     "Type": "Intraday",
     "SLType": "Trailing"
 }
