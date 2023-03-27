@@ -7,10 +7,26 @@ MyAccount = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
+    "HedgeQty": 1450,
+    "Qty": 1000,
+    "Hour": 9,
+    "Min": 44,
+    "Seconds": 57,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+MyAccount2 = {
+
+    "Name": "My Account 2",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
     "HedgeQty": 1400,
     "Qty": 1050,
-    "Hour": 9,
-    "Min": 45,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 57,
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
@@ -21,10 +37,11 @@ Riyaaz1 = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
-    "HedgeQty": 4200,
-    "Qty": 3100,
+    "HedgeQty": 2900,
+    "Qty": 2100,
     "Hour": 9,
-    "Min": 45,
+    "Min": 44,
+    "Seconds": 57,
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
@@ -33,12 +50,13 @@ Riyaaz2 = {
     "Name": "Riyaaz 2",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 250,
+    "HedgeStrike": 200,
     "StopLoss": 35,
-    "HedgeQty": 3800,
+    "HedgeQty": 3900,
     "Qty": 2900,
     "Hour": 10,
-    "Min": 30,
+    "Min": 29,
+    "Seconds": 57,
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
@@ -49,12 +67,13 @@ Riyaaz3 = {
     "Strike": 0,
     "HedgeStrike": 800,
     "StopLoss": 35,
-    "HedgeQty": 275,
-    "Qty": 200,
-    "Hour": 11,
-    "Min": 0,
+    "HedgeQty": 500,
+    "Qty": 400,
+    "Hour": 10,
+    "Min": 59,
+    "Seconds": 57,
     "Type": "NRML",
-    "SLType": "TrailToCost"
+    "SLType": "None"
 }
 Rishee = {
 
@@ -63,10 +82,11 @@ Rishee = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
-    "HedgeQty": 1300,
-    "Qty": 1000,
+    "HedgeQty": 1500,
+    "Qty": 1050,
     "Hour": 9,
-    "Min": 45,
+    "Min": 44,
+    "Seconds": 57,
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
@@ -77,10 +97,11 @@ Rishee2 = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
-    "HedgeQty": 1400,
-    "Qty": 950,
+    "HedgeQty": 1500,
+    "Qty": 1000,
     "Hour": 10,
-    "Min": 30,
+    "Min": 29,
+    "Seconds": 57,
     "Type": "NRML",
     "SLType": "TrailToCost"
 }

@@ -5,12 +5,28 @@ MyAccount = {
     "Name": "My Account",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 450,
+    "HedgeStrike": 400,
     "StopLoss": 35,
-    "HedgeQty": 1550,
-    "Qty": 1150,
+    "HedgeQty": 1250,
+    "Qty": 750,
     "Hour": 9,
-    "Min": 45,
+    "Min": 51,
+    "Seconds": 57,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
+MyAccount2 = {
+
+    "Name": "My Account 2",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 400,
+    "StopLoss": 35,
+    "HedgeQty": 1250,
+    "Qty": 750,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -19,12 +35,13 @@ Riyaaz1 = {
     "Name": "Riyaaz 1",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 450,
+    "HedgeStrike": 400,
     "StopLoss": 35,
-    "HedgeQty": 2900,
-    "Qty": 2150,
+    "HedgeQty": 1850,
+    "Qty": 1500,
     "Hour": 9,
-    "Min": 45,
+    "Min": 44,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -35,10 +52,26 @@ Riyaaz2 = {
     "Strike": 0,
     "HedgeStrike": 400,
     "StopLoss": 35,
-    "HedgeQty": 2950,
-    "Qty": 2150,
+    "HedgeQty": 2600,
+    "Qty": 2000,
     "Hour": 10,
-    "Min": 30,
+    "Min": 29,
+    "Seconds": 57,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
+Riyaaz3 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 400,
+    "StopLoss": 35,
+    "HedgeQty": 1300,
+    "Qty": 850,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -47,12 +80,28 @@ Rishee = {
     "Name": "Rishee",
     "Index": "Nifty",
     "Strike": 0,
+    "HedgeStrike": 400,
+    "StopLoss": 35,
+    "HedgeQty": 1050,
+    "Qty": 750,
+    "Hour": 9,
+    "Min": 51,
+    "Seconds": 57,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
+Rishee2 = {
+
+    "Name": "Rishee",
+    "Index": "Nifty",
+    "Strike": 0,
     "HedgeStrike": 450,
     "StopLoss": 35,
-    "HedgeQty": 900,
-    "Qty": 700,
-    "Hour": 9,
-    "Min": 45,
+    "HedgeQty": 1000,
+    "Qty": 650,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }

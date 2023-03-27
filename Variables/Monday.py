@@ -11,6 +11,24 @@ MyAccount = {
     "Qty": 600,
     "Hour": 10,
     "Min": 30,
+    "Seconds": 57,
+    "Type": "Intraday",
+    "SLType": "Trailing"
+}
+
+
+MyAccount2 = {
+
+    "Name": "My Account",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 600,
+    "HedgeQty": 800,
+    "StopLoss": 30,
+    "Qty": 600,
+    "Hour": 10,
+    "Min": 30,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "Trailing"
 }
@@ -25,6 +43,7 @@ Riyaaz1 = {
     "Qty": 2100,
     "Hour": 9,
     "Min": 20,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "Trailing"
 }
@@ -39,6 +58,7 @@ Riyaaz2 = {
     "Qty": 1800,
     "Hour": 10,
     "Min": 37,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "Trailing"
 }
@@ -53,6 +73,7 @@ Riyaaz3 = {
     "Qty": 700,
     "Hour": 9,
     "Min": 45,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "Trailing"
 }
@@ -67,6 +88,7 @@ Rishee = {
     "Qty": 640,
     "Hour": 10,
     "Min": 30,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "Trailing"
 }
@@ -81,6 +103,7 @@ Rishee2 = {
     "Qty": 550,
     "Hour": 9,
     "Min": 20,
+    "Seconds": 57,
     "Type": "Intraday",
     "SLType": "Trailing"
 }

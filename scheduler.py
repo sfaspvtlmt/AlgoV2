@@ -14,6 +14,8 @@ def start():
     print("Monday ON")
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\MyAccount\run.py')
     time.sleep(2)
+    # os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\MyAccount2\run.py')
+    time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee\run.py')
     time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Riyaaz2\run.py')
@@ -28,11 +30,11 @@ def start():
 
 
 
-schedule.every().monday.at("09:19:55").do(start)
-schedule.every().tuesday.at("09:31").do(start)
-schedule.every().wednesday.at("09:38").do(start)
-schedule.every().thursday.at("09:40").do(start)
-schedule.every().friday.at("09:40").do(start)
+schedule.every().monday.at("07:09").do(start)
+schedule.every().tuesday.at("09:18").do(start)
+schedule.every().wednesday.at("09:18").do(start)
+schedule.every().thursday.at("09:18").do(start)
+schedule.every().friday.at("10:00").do(start)
 # schedule.every().sunday.at("11:59").do(Thursday)
 
 while 1:
