@@ -16,13 +16,13 @@ from datetime import datetime
 x = datetime.now().isoweekday()
 
 if(x==1):
-    main.Main(Monday.MyAccount2, Cred.MyAccount)
+    main.Main(Monday.MyAccount2, Cred.MyAccount2)
 elif(x ==2):
-    main.Main(Tuesday.MyAccount2, Cred.MyAccount)
+    main.Main(Tuesday.MyAccount2, Cred.MyAccount2)
 elif(x==3):
-    main.Main(Wednesday.MyAccount2, Cred.MyAccount)
+    main.Main(Wednesday.MyAccount2, Cred.MyAccount2)
 elif(x ==4):
-    main.Main(Thursday.MyAccount2, Cred.MyAccount)
+    main.Main(Thursday.MyAccount2, Cred.MyAccount2)
 elif(x==5):
-    main.Main(Friday.MyAccount2, Cred.MyAccount)
+    main.Main(Friday.MyAccount2, Cred.MyAccount2)
 

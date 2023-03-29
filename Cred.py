@@ -8,7 +8,7 @@ Rishee = {
     "pwd": "1234@Asdf",
     "factor2": pyotp.TOTP('M72O2Y7O7X636A32467Q2BK7MPBH75L3').now(),
     "vc": "FA95327_U",
-    "app_key": "b4c3e137692be838eec02c463db7ad21",
+    "app_key": "36147c4e6f53b577738059d9b6efd3c4",
     "imei": "abc1234",
 }
 
@@ -27,6 +27,15 @@ MyAccount = {
     "factor2": pyotp.TOTP('HT7BL6VP547NI6IYU54R454V553H25NA').now(),
     "vc": "FA82894_U",
     "app_key": "05b3e551c4e732413bd6e5b09b224d85",
+    "imei": "abc1234",
+
+}
+MyAccount2 = {
+    "user": "FA102383",
+    "pwd": "Arush123@",
+    "factor2": pyotp.TOTP('B3B27S5I7PQBOGW2465YK33DEK3T6TTD').now(),
+    "vc": "FA102383_U",
+    "app_key": "f709827d38cc15742ff05efb32e21bb6",
     "imei": "abc1234",
 
 }
