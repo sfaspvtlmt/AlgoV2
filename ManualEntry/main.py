@@ -1,11 +1,11 @@
 from os import system
 from api_helper import ShoonyaApiPy
-import Variables
-import Cred
+import Variable
 import time
 import datetime
 import Script
 import Store
+import Cred
 
 
 def Main(Variables, Cred):
@@ -25,4 +25,4 @@ def Main(Variables, Cred):
     Script.Search(api, Variables)
 
 
-Main(Variables.Riyaaz2, Cred.Riyaaz2)
+Main(Variable.MyAccount, Cred.MyAccount)

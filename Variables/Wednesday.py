@@ -5,14 +5,14 @@ MyAccount = {
     "Name": "My Account",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 200,
+    "HedgeStrike": 400,
     "StopLoss": 35,
-    "HedgeQty": 450,
-    "Qty": 300,
+    "HedgeQty": 300,
+    "Qty": 250,
     "Hour": 9,
     "Min": 44,
-    "Seconds": 57,
-    "Type": "NRML",
+    "Seconds": 58,
+    "Type": "Intraday",
     "SLType": "TrailToCost"
 }
 MyAccount2 = {
@@ -20,14 +20,14 @@ MyAccount2 = {
     "Name": "My Account 2",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 200,
+    "HedgeStrike": 300,
     "StopLoss": 35,
     "HedgeQty": 400,
     "Qty": 250,
     "Hour": 10,
     "Min": 29,
-    "Seconds": 57,
-    "Type": "NRML",
+    "Seconds": 58,
+    "Type": "Intraday",
     "SLType": "TrailToCost"
 }
 Riyaaz1 = {
@@ -35,14 +35,14 @@ Riyaaz1 = {
     "Name": "Riyaaz 1",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 200,
+    "HedgeStrike": 300,
     "StopLoss": 35,
-    "HedgeQty": 3200,
-    "Qty": 2400,
+    "HedgeQty": 2750,
+    "Qty": 1950,
     "Hour": 9,
     "Min": 44,
-    "Seconds": 57,
-    "Type": "NRML",
+    "Seconds": 58,
+    "Type": "Intraday",
     "SLType": "TrailToCost"
 }
 Riyaaz2 = {
@@ -50,44 +50,44 @@ Riyaaz2 = {
     "Name": "Riyaaz 2",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 200,
+    "HedgeStrike": 300,
     "StopLoss": 35,
-    "HedgeQty": 4000,
-    "Qty": 3000,
+    "HedgeQty": 3250,
+    "Qty": 2450,
     "Hour": 10,
     "Min": 29,
-    "Seconds": 57,
-    "Type": "NRML",
+    "Seconds": 58,
+    "Type": "Intraday",
     "SLType": "TrailToCost"
 }
 Riyaaz3 = {
 
     "Name": "Riyaaz 3",
-    "Index": "BankNifty",
+    "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 600,
+    "HedgeStrike": 300,
     "StopLoss": 35,
-    "HedgeQty": 700,
-    "Qty": 500,
-    "Hour": 10,
-    "Min": 59,
-    "Seconds": 57,
-    "Type": "NRML",
-    "SLType": "Nothing"
+    "HedgeQty": 1450,
+    "Qty": 1000,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
 }
 Rishee = {
 
     "Name": "Rishee 1",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 200,
+    "HedgeStrike": 300,
     "StopLoss": 35,
-    "HedgeQty": 1500,
-    "Qty": 1150,
+    "HedgeQty": 1450,
+    "Qty": 1000,
     "Hour": 9,
     "Min": 44,
-    "Seconds": 57,
-    "Type": "NRML",
+    "Seconds": 58,
+    "Type": "Intraday",
     "SLType": "TrailToCost"
 }
 Rishee2 = {
@@ -95,13 +95,13 @@ Rishee2 = {
     "Name": "Rishee 2",
     "Index": "Nifty",
     "Strike": 0,
-    "HedgeStrike": 200,
+    "HedgeStrike": 300,
     "StopLoss": 35,
-    "HedgeQty": 1350,
-    "Qty": 1000,
+    "HedgeQty": 1300,
+    "Qty": 850,
     "Hour": 10,
     "Min": 29,
-    "Seconds": 57,
-    "Type": "NRML",
+    "Seconds": 58,
+    "Type": "Intraday",
     "SLType": "TrailToCost"
 }

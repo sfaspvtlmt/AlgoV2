@@ -90,15 +90,17 @@ def event_handler_quote_update(message):
                                      retention='DAY', remarks='9:45 Hedge PE BUY')
 
             while (SlQty > maxQty):
-                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
                                      exchange='NFO', tradingsymbol=Store.strike['PE'],
                                      quantity=maxQty, discloseqty=0, price_type='MKT', price=0,
                                      trigger_price=None,
                                      retention='DAY', remarks='9:45 PE SELL')
                 SlQty = SlQty-maxQty
+                
+               
 
             if (SlQty > 200):
-                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
                                      exchange='NFO', tradingsymbol=Store.strike['PE'],
                                      quantity=SlQty-200, discloseqty=0, price_type='MKT', price=0,
                                      trigger_price=None,
@@ -106,36 +108,36 @@ def event_handler_quote_update(message):
                 SlQty = 200
             while (SlQty > 0):
 
-                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
                                      exchange='NFO', tradingsymbol=Store.strike['PE'],
                                      quantity=minQty, discloseqty=0, price_type='MKT', price=0,
                                      trigger_price=None,
                                      retention='DAY', remarks='9:45 PE SELL')
                 SlQty = SlQty-minQty
-            SlQty = Var["Qty"]
-            while (SlQty > maxQty):
-                res = xd.place_order(buy_or_sell='B', product_type=Type,
-                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
-                                     quantity=maxQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
-                                     trigger_price=Store.stopLoss['PE'],
-                                     retention='DAY', remarks='9:45 PE SL')
-                SlQty = SlQty-maxQty
-            if (SlQty > 200):
+            # SlQty = Var["Qty"]
+            # while (SlQty > maxQty):
+            #     res = xd.place_order(buy_or_sell='B', product_type=Type,
+            #                          exchange='NFO', tradingsymbol=Store.strike['PE'],
+            #                          quantity=maxQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
+            #                          trigger_price=Store.stopLoss['PE'],
+            #                          retention='DAY', remarks='9:45 PE SL')
+            #     SlQty = SlQty-maxQty
+            # if (SlQty > 200):
 
-                res = xd.place_order(buy_or_sell='B', product_type=Type,
-                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
-                                     quantity=SlQty-200, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
-                                     trigger_price=Store.stopLoss['PE'],
-                                     retention='DAY', remarks='9:45 PE SL')
-                SlQty = 200
-            while (SlQty > 0):
+            #     res = xd.place_order(buy_or_sell='B', product_type=Type,
+            #                          exchange='NFO', tradingsymbol=Store.strike['PE'],
+            #                          quantity=SlQty-200, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
+            #                          trigger_price=Store.stopLoss['PE'],
+            #                          retention='DAY', remarks='9:45 PE SL')
+            #     SlQty = 200
+            # while (SlQty > 0):
 
-                res = xd.place_order(buy_or_sell='B', product_type=Type,
-                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
-                                     quantity=minQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
-                                     trigger_price=Store.stopLoss['PE'],
-                                     retention='DAY', remarks='9:45 PE SL')
-                SlQty = SlQty - minQty
+            #     res = xd.place_order(buy_or_sell='B', product_type=Type,
+            #                          exchange='NFO', tradingsymbol=Store.strike['PE'],
+            #                          quantity=minQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['PE']+6,
+            #                          trigger_price=Store.stopLoss['PE'],
+            #                          retention='DAY', remarks='9:45 PE SL')
+            #     SlQty = SlQty - minQty
 
             Store.status1 = "CE SL HIT"
             Store.status = "CE SL HIT"
@@ -169,7 +171,7 @@ def event_handler_quote_update(message):
                                      retention='DAY', remarks='9:45 Hedge CE BUY')
 
             while (SlQty > maxQty):
-                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
                                      exchange='NFO', tradingsymbol=Store.strike['CE'],
                                      quantity=maxQty, discloseqty=0, price_type='MKT', price=0,
                                      trigger_price=None,
@@ -177,14 +179,14 @@ def event_handler_quote_update(message):
                 SlQty = SlQty-maxQty
 
             if (SlQty > 200):
-                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
                                      exchange='NFO', tradingsymbol=Store.strike['CE'],
                                      quantity=SlQty-200, discloseqty=0, price_type='MKT', price=0,
                                      trigger_price=None,
                                      retention='DAY', remarks='9:45 CE SELL')
                 SlQty = 200
             while (SlQty > 0):
-                res = xd.place_order(buy_or_sell='S', product_type=Type,
+                res = xd.place_order(buy_or_sell='B', product_type=Type,
                                      exchange='NFO', tradingsymbol=Store.strike['CE'],
                                      quantity=minQty, discloseqty=0, price_type='MKT', price=0,
                                      trigger_price=None,
@@ -192,29 +194,29 @@ def event_handler_quote_update(message):
                 SlQty = SlQty-minQty
 
             SlQty = Var["Qty"]
-            while (SlQty > maxQty):
-                res = xd.place_order(buy_or_sell='B', product_type=Type,
-                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
-                                     quantity=maxQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
-                                     trigger_price=Store.stopLoss['CE'],
-                                     retention='DAY', remarks='9:45 CE SL')
-                SlQty = SlQty-maxQty
-            if (SlQty > 200):
+            # while (SlQty > maxQty):
+            #     res = xd.place_order(buy_or_sell='B', product_type=Type,
+            #                          exchange='NFO', tradingsymbol=Store.strike['CE'],
+            #                          quantity=maxQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
+            #                          trigger_price=Store.stopLoss['CE'],
+            #                          retention='DAY', remarks='9:45 CE SL')
+            #     SlQty = SlQty-maxQty
+            # if (SlQty > 200):
 
-                res = xd.place_order(buy_or_sell='B', product_type=Type,
-                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
-                                     quantity=SlQty-200, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
-                                     trigger_price=Store.stopLoss['CE'],
-                                     retention='DAY', remarks='9:45 CE SL')
-                SlQty = 200
-            while (SlQty > 0):
+            #     res = xd.place_order(buy_or_sell='B', product_type=Type,
+            #                          exchange='NFO', tradingsymbol=Store.strike['CE'],
+            #                          quantity=SlQty-200, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
+            #                          trigger_price=Store.stopLoss['CE'],
+            #                          retention='DAY', remarks='9:45 CE SL')
+            #     SlQty = 200
+            # while (SlQty > 0):
 
-                res = xd.place_order(buy_or_sell='B', product_type=Type,
-                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
-                                     quantity=minQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
-                                     trigger_price=Store.stopLoss['CE'],
-                                     retention='DAY', remarks='9:45 CE SL')
-                SlQty = SlQty - minQty
+            #     res = xd.place_order(buy_or_sell='B', product_type=Type,
+            #                          exchange='NFO', tradingsymbol=Store.strike['CE'],
+            #                          quantity=minQty, discloseqty=0, price_type='SL-LMT', price=Store.stopLoss['CE']+6,
+            #                          trigger_price=Store.stopLoss['CE'],
+            #                          retention='DAY', remarks='9:45 CE SL')
+            #     SlQty = SlQty - minQty
         Store.status1 = "PE SL HIT"
         Store.status = "PE SL HIT"
 

@@ -1,16 +1,17 @@
 import currentStrike
 from os import system
 import math
-
+import RollingStraddle
 import Store
 import Execute
-
+import time
 
 def Search(api, Variables):
     Store.atmStrike = currentStrike.currentStrike(
         api, Variables["Index"])
     # Search Scripts and Store them
-
+    print("HI")
+    
     hedgeCE = api.searchscrip("NFO", Variables["Index"] + " " +
                               str(Store.atmStrike + Variables["HedgeStrike"]) + " CE")
 
@@ -44,12 +45,33 @@ def Search(api, Variables):
     Store.Price['PE'] = float(res['lp'])
     Store.stopLoss['PE'] = math.ceil(
         float(res['lp']) * (1 + Variables["StopLoss"]/100))
-    system('cls')
     
-    
-    
+    res = api.place_order(buy_or_sell='B', product_type="I",
+                                     exchange='NFO', tradingsymbol=Store.strike['hedgeCE'],
+                                     quantity=Variables['HedgeQty'], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 CE SELL')
+    print(res)
+    res = api.place_order(buy_or_sell='B', product_type="I",
+                                     exchange='NFO', tradingsymbol=Store.strike['hedgePE'],
+                                     quantity=Variables['HedgeQty'], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 CE SELL')
+    res = api.place_order(buy_or_sell='S', product_type="I",
+                                     exchange='NFO', tradingsymbol=Store.strike['CE'],
+                                     quantity=Variables['Qty'], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 CE SELL')
+    res = api.place_order(buy_or_sell='S', product_type="I",
+                                     exchange='NFO', tradingsymbol=Store.strike['PE'],
+                                     quantity=Variables['Qty'], discloseqty=0, price_type='MKT', price=0,
+                                     trigger_price=None,
+                                     retention='DAY', remarks='9:45 CE SELL')
+
+
 
     print(Store.Price)
     print(Store.stopLoss)
+    print("Fuck u ")
     Store.status1 = "Executed Straddle"
-    Execute.sl(api, Variables)
+    RollingStraddle.sl(api, Variables)

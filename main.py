@@ -5,6 +5,7 @@ import time
 import datetime
 import Script
 import Store
+import rollingstraddleScript
 
 
 def Main(Variables, Cred):
@@ -28,5 +29,6 @@ def Main(Variables, Cred):
         time.sleep(1)
         if int(now.hour) == Variables["Hour"] and int(now.minute) == Variables["Min"] and int(now.second)>= Variables["Seconds"]:
             Script.Search(api, Variables)
+        # rollingstraddleScript.Search(api, Variables)
 
 

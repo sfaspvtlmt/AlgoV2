@@ -3,12 +3,12 @@
 MyAccount = {
 
     "Name": "My Account",
-    "Index": "FinNifty",
-    "Strike": 0,
-    "HedgeStrike": 250,
+    "Index": "BankNifty",
+    "Strike": 100,
+    "HedgeStrike": 500,
     "StopLoss": 35,
-    "HedgeQty": 400,
-    "Qty": 280,
+    "HedgeQty": 280,
+    "Qty": 200,
     "Hour": 9,
     "Min": 44,
     "Seconds": 57,
