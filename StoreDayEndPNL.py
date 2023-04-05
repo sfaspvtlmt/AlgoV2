@@ -65,10 +65,8 @@ def Main( Cred):
         new_data['High']= new_data['Capital']+day_m2m
 
     # Use update_one() to replace or insert the data
-    search_criteria = {"ClientID": Cred['user'], "Date": now.strftime("%Y-%m-%d"),
-                       }
-    result = my_collection.update_one(
-        search_criteria, {"$set": new_data}, upsert=True)
+    search_criteria = {"ClientID": Cred['user'], "Date": now.strftime("%Y-%m-%d") }
+    result = my_collection.update_one(search_criteria, {"$set": new_data}, upsert=True)
 
     # Print the result of the operation
     # print("Matched count:", result.matched_count)
