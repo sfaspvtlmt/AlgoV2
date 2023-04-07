@@ -36,7 +36,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-03-31"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-06"
                     }
 
     # Define the new data to replace or insert

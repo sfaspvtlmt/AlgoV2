@@ -5,7 +5,7 @@ import time
 import datetime
 import Script
 import Store
-import rollingstraddleScript
+
 
 
 def Main(Variables, Cred):
