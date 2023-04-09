@@ -33,8 +33,8 @@ MyAccount2 = {
 Riyaaz1 = {
 
     "Name": "Riyaaz 1",
-    "Index": "FinNifty",
-    "Strike": 0,
+    "Index": "Nifty",
+    "Strike": 200,
     "HedgeStrike": 400,
     "StopLoss": 30,
     "HedgeQty": 2320,
