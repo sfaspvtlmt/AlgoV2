@@ -54,7 +54,7 @@ def Main( Cred):
         "Drawdown": 0,
         "PNLPercent": round(day_m2m/capital *100,2),
         "Capital": round(capital,2),
-        "High": result['Capital']
+        "High": result['High']
     }
     if(day_m2m>0  and result['Drawdown']>day_m2m):
         new_data['Drawdown'] = result['Drawdown']-day_m2m
