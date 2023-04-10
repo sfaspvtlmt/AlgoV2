@@ -11,7 +11,7 @@ MyAccount = {
     "Qty": 280,
     "Hour": 9,
     "Min": 19,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -28,7 +28,7 @@ MyAccount2 = {
     "Qty": 280,
     "Hour": 9,
     "Min": 44,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -43,7 +43,7 @@ Riyaaz1 = {
     "Qty": 2200,
     "Hour": 9,
     "Min": 44,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -58,7 +58,7 @@ Riyaaz2 = {
     "Qty": 2520,
     "Hour": 9,
     "Min": 19,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -73,7 +73,7 @@ Riyaaz3 = {
     "Qty": 1080,
     "Hour": 10,
     "Min": 29,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -88,7 +88,7 @@ Rishee = {
     "Qty": 1120,
     "Hour": 9,
     "Min": 44,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
@@ -103,7 +103,7 @@ Rishee2 = {
     "Qty": 880,
     "Hour": 9,
     "Min": 19,
-    "Seconds": 57,
+    "Seconds": 58,
     "Type": "Intraday",
     "SLType": "TrailToCost"
 }
