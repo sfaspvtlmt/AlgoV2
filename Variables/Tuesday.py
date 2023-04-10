@@ -25,8 +25,8 @@ MyAccount2 = {
     "StopLoss": 35,
     "HedgeQty": 360,
     "Qty": 280,
-    "Hour": 9,
-    "Min": 45,
+    "Hour": 10,
+    "Min": 29,
     "Seconds": 58,
     "Type": "NRML",
     "SLType": "TrailToCost"

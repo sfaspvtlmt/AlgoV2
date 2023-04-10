@@ -31,7 +31,7 @@ def start():
 
 
 schedule.every().monday.at("09:18").do(start)
-schedule.every().tuesday.at("09:19").do(start)
+schedule.every().tuesday.at("09:30").do(start)
 schedule.every().wednesday.at("09:30").do(start)
 schedule.every().thursday.at("09:30").do(start)
 schedule.every().friday.at("10:00").do(start)
