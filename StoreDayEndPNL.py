@@ -21,11 +21,13 @@ def Main( Cred):
     print(name)
     mtm = 0
     pnl = 0
-    for i in ret:
+    if(ret != None):
+     for i in ret:
         mtm += float(i['urmtom'])
         pnl += float(i['rpnl'])
         day_m2m = mtm + pnl
-    
+    else :
+        day_m2m =0
     if(day_m2m ==None):
         day_m2m =0
     # Connect to the MongoDB server

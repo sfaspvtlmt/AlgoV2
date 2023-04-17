@@ -16,7 +16,7 @@ def start():
     time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\MyAccount2\run.py')
     time.sleep(2)
-    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee\run.py')
+    # os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee\run.py')
     time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Riyaaz2\run.py')
     time.sleep(2)
@@ -24,7 +24,7 @@ def start():
     time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Riyaaz3\run.py')
     time.sleep(2)
-    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee2\run.py')
+    # os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Rishee2\run.py')
 
 
 
