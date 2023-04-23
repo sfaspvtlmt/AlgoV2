@@ -38,11 +38,12 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-06"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-20"
                     }
 
     # Define the new data to replace or insert
     limits = api.get_limits()
+    
     print(limits)
     capital = float(limits['collateral'] if  'collateral' in limits else 0)+ float(limits['cash'])+float(limits['payin'])
     result = my_collection.find_one(
@@ -69,7 +70,8 @@ def Main( Cred):
     # Use update_one() to replace or insert the data
     search_criteria = {"ClientID": Cred['user'], "Date": now.strftime("%Y-%m-%d") }
     result = my_collection.update_one(search_criteria, {"$set": new_data}, upsert=True)
-
+    
+    
     # Print the result of the operation
     # print("Matched count:", result.matched_count)
     # print("Modified count:", result.modified_count)
@@ -80,5 +82,5 @@ Main( Cred.MyAccount2)
 Main( Cred.Riyaaz1)
 Main( Cred.Riyaaz2)
 Main( Cred.Riyaaz3)
-Main( Cred.Rishee)
-Main( Cred.Rishee2)
+# Main( Cred.Rishee)
+# Main( Cred.Rishee2)

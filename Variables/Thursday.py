@@ -8,7 +8,7 @@ MyAccount = {
     "HedgeStrike": 200,
     "StopLoss": 35,
     "HedgeQty": 400,
-    "Qty": 350,
+    "Qty": 300,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -22,8 +22,8 @@ MyAccount2 = {
     "Strike": 0,
     "HedgeStrike": 200,
     "StopLoss": 35,
-    "HedgeQty": 500,
-    "Qty": 350,
+    "HedgeQty": 400,
+    "Qty": 300,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -37,8 +37,8 @@ Riyaaz1 = {
     "Strike": 0,
     "HedgeStrike": 200,
     "StopLoss": 35,
-    "HedgeQty": 3750,
-    "Qty": 2700,
+    "HedgeQty": 3800,
+    "Qty": 2900,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -52,8 +52,8 @@ Riyaaz2 = {
     "Strike": 0,
     "HedgeStrike": 200,
     "StopLoss": 35,
-    "HedgeQty": 4450,
-    "Qty": 3350,
+    "HedgeQty": 4850,
+    "Qty": 3400,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -75,34 +75,3 @@ Riyaaz3 = {
     "Type": "NRML",
     "SLType": "None"
 }
-Rishee = {
-
-    "Name": "Rishee 1",
-    "Index": "Nifty",
-    "Strike": 0,
-    "HedgeStrike": 200,
-    "StopLoss": 35,
-    "HedgeQty": 1900,
-    "Qty": 1350,
-    "Hour": 9,
-    "Min": 44,
-    "Seconds": 58,
-    "Type": "NRML",
-    "SLType": "TrailToCost"
-}
-Rishee2 = {
-
-    "Name": "Rishee 2",
-    "Index": "Nifty",
-    "Strike": 0,
-    "HedgeStrike": 200,
-    "StopLoss": 35,
-    "HedgeQty": 1500,
-    "Qty": 1100,
-    "Hour": 10,
-    "Min": 29,
-    "Seconds": 58,
-    "Type": "NRML",
-    "SLType": "TrailToCost"
-}
-
