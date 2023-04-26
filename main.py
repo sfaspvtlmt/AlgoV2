@@ -28,7 +28,7 @@ def Main(Variables, Cred):
         print(now.hour, ":", now.minute, ":", now.second)
         time.sleep(1)
         if int(now.hour) == Variables["Hour"] and int(now.minute) == Variables["Min"] and int(now.second)>= Variables["Seconds"]:
-            Script.Search(api, Variables)
+         Script.Search(api, Variables)
         # rollingstraddleScript.Search(api, Variables)
 
 

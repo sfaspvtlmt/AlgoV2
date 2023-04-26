@@ -38,7 +38,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-20"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-25"
                     }
 
     # Define the new data to replace or insert
@@ -68,7 +68,8 @@ def Main( Cred):
         new_data['High']= new_data['Capital']+day_m2m
 
     # Use update_one() to replace or insert the data
-    search_criteria = {"ClientID": Cred['user'], "Date": now.strftime("%Y-%m-%d") }
+    search_criteria = {
+        "ClientID": Cred['user'], "Date": now.strftime("%Y-%m-%d")}
     result = my_collection.update_one(search_criteria, {"$set": new_data}, upsert=True)
     
     

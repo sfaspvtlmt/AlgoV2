@@ -59,7 +59,7 @@ Riyaaz2 = {
 }
 Riyaaz3 = {
     "user": "FA116176",
-    "pwd": "1234@Qwer",
+    "pwd": "1234@Zxcv",
     "factor2": pyotp.TOTP('3XW6QWU66DZFH737RT47RR335OA73XXN').now(),
     "vc": "FA116176_U",
     "app_key": "ca2d0ec328dfefdc324b4e0525dbbb32",
