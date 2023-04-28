@@ -13,6 +13,7 @@ def Main( Cred):
 
 
 # make the api call
+    print(Cred)
     name = api.login(userid=Cred["user"], password=Cred["pwd"], twoFA=Cred["factor2"],
                     vendor_code=Cred["vc"], api_secret=Cred["app_key"], imei=Cred["imei"])
     
@@ -38,7 +39,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-25"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-27"
                     }
 
     # Define the new data to replace or insert
@@ -53,7 +54,7 @@ def Main( Cred):
         "ClientID": Cred['user'],
         "ClientName": name['uname'],
         "Date": now.strftime( "%Y-%m-%d"),
-        "PNL": day_m2m,
+        "PNL": 0,
         "Drawdown": 0,
         "PNLPercent": round(day_m2m/capital *100,2),
         "Capital": round(capital,2),
@@ -78,10 +79,9 @@ def Main( Cred):
     # print("Modified count:", result.modified_count)
     # print("Upserted ID:", result.upserted_id)
         
-Main( Cred.MyAccount)
-Main( Cred.MyAccount2)
-Main( Cred.Riyaaz1)
-Main( Cred.Riyaaz2)
-Main( Cred.Riyaaz3)
-# Main( Cred.Rishee)
-# Main( Cred.Rishee2)
+# Main( Cred.MyAccount)
+# Main( Cred.MyAccount2)
+# Main( Cred.Riyaaz1)
+# Main( Cred.Riyaaz2)
+# Main( Cred.Riyaaz3)
+Main( Cred.Rajshekhar)
