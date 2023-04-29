@@ -44,5 +44,4 @@ def ConnectApi(Cred):
     
 
 
-ConnectApi(Cred.MyAccount)
-ConnectApi(Cred.MyAccount2)
+ConnectApi(Cred.Rajshekhar)
