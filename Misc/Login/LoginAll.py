@@ -44,4 +44,7 @@ def ConnectApi(Cred):
     
 
 
+ConnectApi(Cred.Sumit)
 ConnectApi(Cred.Rajshekhar)
+ConnectApi(Cred.Vijet)
+ConnectApi(Cred.Parag)

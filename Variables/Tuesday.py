@@ -76,31 +76,121 @@ Riyaaz3 = {
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
-Rishee = {
+Vijet1 = {
 
-    "Name": "Rishee",
+    "Name": "Riyaaz 3",
     "Index": "FinNifty",
     "Strike": 0,
     "HedgeStrike": 200,
     "StopLoss": 35,
-    "HedgeQty": 1800,
-    "Qty": 1320,
-    "Hour": 9,
-    "Min": 44,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
     "Seconds": 58,
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
-Rishee2 = {
+Vijet2 = {
 
-    "Name": "Rishee 2",
+    "Name": "Riyaaz 3",
     "Index": "FinNifty",
     "Strike": 0,
     "HedgeStrike": 200,
     "StopLoss": 35,
-    "HedgeQty": 1520,
-    "Qty": 1080,
-    "Hour": 10,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Parag1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Parag2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Rajshekhar1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Rajshekhar2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Sumit1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Sumit2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
     "Min": 29,
     "Seconds": 58,
     "Type": "NRML",

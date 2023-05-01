@@ -1,18 +1,18 @@
 
 
-Riyaaz = 3200000
+Riyaaz = 7500000
 
-Rishee = 1240000
+Rishee = 0
 
 AnkitBhaiya = 0
 
-Arush = 800000
+Arush = 0
 
-NewClient =2000000
+NewClient =0
 
-Return = 15
+Return = 10
 i =1
-months =12
+months =8
 
 
 
@@ -20,7 +20,7 @@ months =12
 while (i<=months):
     
     
-    Riyaaz = Riyaaz*(1+0.008*Return)
+    Riyaaz = Riyaaz*(1+0.005*Return)
     
     Rishee = Rishee*(1+0.007*Return)
     
@@ -28,7 +28,10 @@ while (i<=months):
     
     # AnkitBhaiya = AnkitBhaiya*(1+0.000*Return)
     
-    Arush = Arush*(1+0.01*Return) + Riyaaz * (0.002*Return) + Rishee * (0.003*Return) + NewClient*(0.003*Return) 
+    Arush = Arush*(1+0.01*Return) + Riyaaz * (0.005*Return) + Rishee * \
+        (0.003*Return) + NewClient*(0.003*Return)
+
+    # Arush*(1+0.01*Return) + 
     
     print()
     print()

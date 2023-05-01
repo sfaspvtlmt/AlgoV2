@@ -75,3 +75,123 @@ Riyaaz3 = {
     "Type": "Intraday",
     "SLType": "Trailing"
 }
+Vijet1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Vijet2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Parag1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Parag2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Rajshekhar1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Rajshekhar2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Sumit1 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+Sumit2 = {
+
+    "Name": "Riyaaz 3",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 200,
+    "StopLoss": 35,
+    "HedgeQty": 1680,
+    "Qty": 1240,
+    "Hour": 11,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}

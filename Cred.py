@@ -66,20 +66,39 @@ Riyaaz3 = {
     "imei": "abc1234",
 
 }
-Riyaaz3 = {
-    "user": "FA116176",
-    "pwd": "1234@Zxcv",
-    "factor2": pyotp.TOTP('3XW6QWU66DZFH737RT47RR335OA73XXN').now(),
-    "vc": "FA116176_U",
-    "app_key": "ca2d0ec328dfefdc324b4e0525dbbb32",
-    "imei": "abc1234",
 
-}
 Rajshekhar = {
     "user": "FA48557",
     "pwd": "1234@Asdf",
     "factor2": pyotp.TOTP('I664OWI76EZ37M23S65P2422VMRFYON5').now(),
     "vc": "FA48557_U",
     "app_key": "c0108d4e6c0dda016acdb927ec07eabd",
+    "imei": "abc1234",
+}
+
+Vijet = {
+    "user": "FA39931",
+    "pwd": "S@mvij2715",
+    "factor2": pyotp.TOTP('YB2OXD63LU43MD7332JOS473X7EUL4Q2').now(),
+    "vc": "FA39931_U",
+    "app_key": "a215f329b1a97651a499a39ce89c320b",
+    "imei": "abc1234",
+}
+
+Parag = {
+    "user": "FA79274",
+    "pwd": "Light@003",
+    "factor2": pyotp.TOTP('4NK4J37K6Y2XKC6QQ7C445Q3X53Q7A4W').now(),
+    "vc": "FA79274_U",
+    "app_key": "742156edbdfbb208ecd2b80ddd9d5d13",
+    "imei": "abc1234",
+}
+
+Sumit = {
+    "user": "FA100941",
+    "pwd": "Sumit203*",
+    "factor2": pyotp.TOTP('7G346A6R6LBT3JTZY6CB6U4SEG424732').now(),
+    "vc": "FA100941_U",
+    "app_key": "c0c4b64cd11eb088f807126b955c9598",
     "imei": "abc1234",
 }
