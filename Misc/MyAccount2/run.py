@@ -17,7 +17,7 @@ x = datetime.now().isoweekday()
 
 api = ShoonyaApiPy()
 
-Cred = Cred.MyAccount
+Cred = Cred.MyAccount2
 # make the api call
 ret = api.login(userid=Cred["user"], password=Cred["pwd"], twoFA=Cred["factor2"],
                 vendor_code=Cred["vc"], api_secret=Cred["app_key"], imei=Cred["imei"])

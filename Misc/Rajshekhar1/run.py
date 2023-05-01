@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
 import pandas as pd
 import datetime
 import json
@@ -7,8 +9,6 @@ from Variables import Friday
 from Variables import Thursday
 from Variables import Wednesday
 from Variables import Tuesday
-import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
 import Cred
 from NorenRestApiPy.NorenApi import  NorenApi
 import time
@@ -22,7 +22,7 @@ from Variables import Monday
 api = None
 
 def ConnectApi(Cred):
-    f = open(str(Cred["user"])+'.txt', 'r')
+    f = open(str("Misc/Login/"+Cred["user"])+'.txt', 'r')
     usertoken = f.read()
     global api
     

@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
 from Variables import Monday
 import time
 from NorenRestApiPy.NorenApi import NorenApi
@@ -11,8 +13,6 @@ from Variables import Friday
 from Variables import Thursday
 from Variables import Wednesday
 from Variables import Tuesday
-import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
 
 
 # update the user token generated during first script execution
@@ -21,7 +21,7 @@ api = None
 
 
 def ConnectApi(Cred):
-    f = open(str(Cred["user"])+'.txt', 'r')
+    f = open(str("Misc/Login/"+Cred["user"])+'.txt', 'r')
     usertoken = f.read()
     global api
 
