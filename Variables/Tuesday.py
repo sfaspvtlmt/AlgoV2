@@ -196,3 +196,33 @@ Sumit2 = {
     "Type": "NRML",
     "SLType": "TrailToCost"
 }
+Dilip1 = {
+
+    "Name": "Dilip 1",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 300,
+    "StopLoss": 35,
+    "HedgeQty": 1150,
+    "Qty": 900,
+    "Hour": 9,
+    "Min": 44,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
+Dilip2 = {
+
+    "Name": "Dilip 2",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 300,
+    "StopLoss": 35,
+    "HedgeQty": 1150,
+    "Qty": 900,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
