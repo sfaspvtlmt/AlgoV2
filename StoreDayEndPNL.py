@@ -14,12 +14,12 @@ def Main( Cred):
 
 # make the api call
     print(Cred)
-    name = api.login(userid=Cred["user"], password=Cred["pwd"], twoFA=Cred["factor2"],
+    response = api.login(userid=Cred["user"], password=Cred["pwd"], twoFA=Cred["factor2"],
                     vendor_code=Cred["vc"], api_secret=Cred["app_key"], imei=Cred["imei"])
     
     ret = api.get_positions()
     day_m2m =0 
-    print(name)
+    print(response)
     mtm = 0
     pnl = 0
     if(ret != None):
@@ -39,7 +39,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-27"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-28"
                     }
 
     # Define the new data to replace or insert
@@ -50,16 +50,28 @@ def Main( Cred):
     result = my_collection.find_one(
         search_criteria)
     print(result)
+    print(response["uname"])
+    name =""
+    if (Cred["user"] == "FA79274"):
+        name = "Prem"
+    elif (Cred["user"] == "FA48557"):
+        name = "RAJSHEKHAR"
+    elif (Cred["user"] == "FA39931"):
+        name = "Vijet"
+    else :
+        name = response['uname']    
+    print(name)    
     new_data = {
         "ClientID": Cred['user'],
-        "ClientName": name['uname'],
+        "ClientName": name,
         "Date": now.strftime( "%Y-%m-%d"),
-        "PNL": 0,
+        "PNL": day_m2m,
         "Drawdown": 0,
         "PNLPercent": round(day_m2m/capital *100,2),
         "Capital": round(capital,2),
-        "High": result['High']
+        "High": result["High"]
     }
+    print(new_data)
     if(day_m2m>0  and result['Drawdown']>day_m2m):
         new_data['Drawdown'] = result['Drawdown']-day_m2m
     elif (day_m2m < 0):
@@ -84,4 +96,8 @@ def Main( Cred):
 # Main( Cred.Riyaaz1)
 # Main( Cred.Riyaaz2)
 # Main( Cred.Riyaaz3)
-Main( Cred.Rajshekhar)
+# Main( Cred.Rajshekhar)
+# Main( Cred.Vijet)
+# Main( Cred.Parag)
+# Main( Cred.Sumit)
+# Main( Cred.Dilip)

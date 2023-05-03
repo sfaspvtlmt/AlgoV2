@@ -12,6 +12,8 @@ import Cred
 
 def start():
     print("Monday ON")
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Login\LoginAll.py')
+    time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\MyAccount\run.py')
     time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\MyAccount2\run.py')
@@ -38,6 +40,10 @@ def start():
     time.sleep(2)
     os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Parag2\run.py')
     time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Dilip1\run.py')
+    time.sleep(2)
+    os.startfile(r'C:\Users\arush\Documents\AlgoV2\Misc\Dilip2\run.py')
+    time.sleep(2)
 
 
 
@@ -46,7 +52,7 @@ def start():
 schedule.every().monday.at("09:18").do(start)
 schedule.every().tuesday.at("09:30").do(start)
 schedule.every().wednesday.at("09:30").do(start)
-schedule.every().thursday.at("09:35").do(start)
+schedule.every().thursday.at("09:30").do(start)
 schedule.every().friday.at("10:00").do(start)
 # schedule.every().saturday.at("13:43").do(start)
 # schedule.every().sunday.at("11:59").do(Thursday)
