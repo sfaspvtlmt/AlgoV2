@@ -104,7 +104,7 @@ Sumit = {
 }
 Dilip = {
     "user": "FA70057",
-    "pwd": "1234@Asdf",
+    "pwd": "1234@Zxcv",
     "factor2": pyotp.TOTP('M432377UBI25BQ6XQ32TRDUOGD7P3646').now(),
     "vc": "FA70057_U",
     "app_key": "7789ec505d72b96d5a794a0728bf1608",

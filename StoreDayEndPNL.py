@@ -39,7 +39,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-04-28"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-05-03"
                     }
 
     # Define the new data to replace or insert
@@ -58,6 +58,8 @@ def Main( Cred):
         name = "RAJSHEKHAR"
     elif (Cred["user"] == "FA39931"):
         name = "Vijet"
+    elif (Cred["user"] == "FA70057"):
+        name = "Dilip"
     else :
         name = response['uname']    
     print(name)    
@@ -91,13 +93,13 @@ def Main( Cred):
     # print("Modified count:", result.modified_count)
     # print("Upserted ID:", result.upserted_id)
         
-# Main( Cred.MyAccount)
-# Main( Cred.MyAccount2)
-# Main( Cred.Riyaaz1)
-# Main( Cred.Riyaaz2)
-# Main( Cred.Riyaaz3)
-# Main( Cred.Rajshekhar)
-# Main( Cred.Vijet)
-# Main( Cred.Parag)
-# Main( Cred.Sumit)
-# Main( Cred.Dilip)
+Main( Cred.MyAccount)
+Main( Cred.MyAccount2)
+Main( Cred.Riyaaz1)
+Main( Cred.Riyaaz2)
+Main( Cred.Riyaaz3)
+Main( Cred.Rajshekhar)
+Main( Cred.Vijet)
+Main( Cred.Parag)
+Main( Cred.Sumit)
+Main( Cred.Dilip)

@@ -72,6 +72,5 @@ def Search(api, Variables):
 
     print(Store.Price)
     print(Store.stopLoss)
-    print("Fuck u ")
     Store.status1 = "Executed Straddle"
     RollingStraddle.sl(api, Variables)
