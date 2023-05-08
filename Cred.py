@@ -87,7 +87,7 @@ Vijet = {
 
 Parag = {
     "user": "FA79274",
-    "pwd": "Light@003",
+    "pwd": "1234@Asdf",
     "factor2": pyotp.TOTP('4NK4J37K6Y2XKC6QQ7C445Q3X53Q7A4W').now(),
     "vc": "FA79274_U",
     "app_key": "742156edbdfbb208ecd2b80ddd9d5d13",
@@ -96,7 +96,7 @@ Parag = {
 
 Sumit = {
     "user": "FA100941",
-    "pwd": "Sumit203*",
+    "pwd": "1234@Asdf",
     "factor2": pyotp.TOTP('7G346A6R6LBT3JTZY6CB6U4SEG424732').now(),
     "vc": "FA100941_U",
     "app_key": "c0c4b64cd11eb088f807126b955c9598",
