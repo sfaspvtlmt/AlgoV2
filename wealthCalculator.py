@@ -2,19 +2,19 @@
 
 Riyaaz = 0
 
-Rishee = 1231000
+Rishee = 0
 
 AnkitBhaiya = 0
 
-Arush = 520000
+Arush = 500000
 
-NewClient =8750000
+NewClient = 11000000
 
-Return = 20
+Return = 15
 
 i =1
 
-months =6
+months =12
 
 
 
