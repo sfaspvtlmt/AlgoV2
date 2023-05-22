@@ -5,7 +5,7 @@ import pyotp
 
 Rishee = {
     "user": "FA95327",
-    "pwd": "1234@Asdf",
+    "pwd": "1234@Zxcv",
     "factor2": pyotp.TOTP('M72O2Y7O7X636A32467Q2BK7MPBH75L3').now(),
     "vc": "FA95327_U",
     "app_key": "36147c4e6f53b577738059d9b6efd3c4",
@@ -14,7 +14,7 @@ Rishee = {
 
 Rishee2 = {
     "user": "FA115592",
-    "pwd": "1234@Asdf",
+    "pwd": "1234@Qwer",
     "factor2": pyotp.TOTP('4NY3MRBL3J7V27LD2P3DEG654T6AY26U').now(),
     "vc": "FA115592_U",
     "app_key": "f32c6e3196eea9d3b7d6010996d1f3f4",
@@ -42,7 +42,7 @@ MyAccount2 = {
 
 Riyaaz1 = {
     "user": "FA85815",
-    "pwd": "1234@Qwer",
+    "pwd": "Hjkl@6789",
     "factor2": pyotp.TOTP('VR5G3423UKO3K2D6D55M7663X2426HD6').now(),
     "vc": "FA85815_U",
     "app_key": "1902eb0d504a69452c59c15d990100a3",
@@ -78,7 +78,7 @@ Rajshekhar = {
 
 Vijet = {
     "user": "FA39931",
-    "pwd": "S@mvij2715",
+    "pwd": "1234@Asdf",
     "factor2": pyotp.TOTP('YB2OXD63LU43MD7332JOS473X7EUL4Q2').now(),
     "vc": "FA39931_U",
     "app_key": "a215f329b1a97651a499a39ce89c320b",
@@ -96,7 +96,7 @@ Parag = {
 
 Sumit = {
     "user": "FA100941",
-    "pwd": "1234@Asdf",
+    "pwd": "1234@Qwer",
     "factor2": pyotp.TOTP('7G346A6R6LBT3JTZY6CB6U4SEG424732').now(),
     "vc": "FA100941_U",
     "app_key": "c0c4b64cd11eb088f807126b955c9598",
