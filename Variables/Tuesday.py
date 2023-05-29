@@ -1,5 +1,38 @@
 
 
+Harsh1 = {
+
+    "Name": "My Account",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 250,
+    "StopLoss": 35,
+    "HedgeQty": 560,
+    "Qty": 400,
+    "Hour": 9,
+    "Min": 44,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+
+Harsh2 = {
+
+    "Name": "My Account 2",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 250,
+    "StopLoss": 35,
+    "HedgeQty": 560,
+    "Qty": 400,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "NRML",
+    "SLType": "TrailToCost"
+}
+
+
 MyAccount = {
 
     "Name": "My Account",
@@ -7,8 +40,8 @@ MyAccount = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
-    "HedgeQty": 680,
-    "Qty": 480,
+    "HedgeQty": 560,
+    "Qty": 400,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -23,8 +56,8 @@ MyAccount2 = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
-    "HedgeQty": 680,
-    "Qty": 480,
+    "HedgeQty": 560,
+    "Qty": 400,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -39,7 +72,7 @@ Rishee = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 35,
-    "HedgeQty": 520,
+    "HedgeQty": 2200,
     "Qty": 440,
     "Hour": 9,
     "Min": 19,
@@ -55,8 +88,8 @@ Rishee2 = {
     "Strike": 0,
     "HedgeStrike": 250,
     "StopLoss": 30,
-    "HedgeQty": 480,
-    "Qty": 360,
+    "HedgeQty": 1720,
+    "Qty": 1240,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,

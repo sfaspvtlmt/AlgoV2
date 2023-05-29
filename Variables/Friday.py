@@ -34,7 +34,7 @@ MyAccount2 = {
 
 Rishee = {
 
-    "Name": "My Account",
+    "Name":"Rishee 1",
     "Index": "FinNifty",
     "Strike": 0,
     "HedgeStrike": 500,
@@ -50,7 +50,7 @@ Rishee = {
 
 Rishee2 = {
 
-    "Name": "My Account 2",
+    "Name": "Rishee 2",
     "Index": "FinNifty",
     "Strike": 50,
     "HedgeStrike": 500,
@@ -70,8 +70,8 @@ Riyaaz1 = {
     "Strike": 0,
     "HedgeStrike": 500,
     "StopLoss": 35,
-    "HedgeQty": 3680,
-    "Qty": 2640,
+    "HedgeQty": 3400,
+    "Qty": 2440,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -85,8 +85,8 @@ Riyaaz2 = {
     "Strike": 50,
     "HedgeStrike": 500,
     "StopLoss": 30,
-    "HedgeQty": 3160,
-    "Qty": 2320,
+    "HedgeQty": 3080,
+    "Qty": 2160,
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
@@ -97,11 +97,11 @@ Riyaaz3 = {
 
     "Name": "Riyaaz 3",
     "Index": "FinNifty",
-    "Strike": 0,
+    "Strike": 50,
     "HedgeStrike": 500,
     "StopLoss": 30,
-    "HedgeQty": 1240,
-    "Qty": 1000,
+    "HedgeQty": 1520,
+    "Qty": 1080,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -205,8 +205,8 @@ Sumit1 = {
     "Strike": 0,
     "HedgeStrike": 500,
     "StopLoss": 35,
-    "HedgeQty": 520,
-    "Qty": 400,
+    "HedgeQty": 440,
+    "Qty": 360,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -220,7 +220,7 @@ Sumit2 = {
     "Strike": 50,
     "HedgeStrike": 500,
     "StopLoss": 30,
-    "HedgeQty": 440,
+    "HedgeQty": 520,
     "Qty": 400,
     "Hour": 11,
     "Min": 44,
@@ -245,6 +245,37 @@ Dilip1 = {
     "SLType": "Trailing"
 }
 Dilip2 = {
+
+    "Name": "Dilip 2",
+    "Index": "FinNifty",
+    "Strike": 50,
+    "HedgeStrike": 500,
+    "StopLoss": 30,
+    "HedgeQty": 1160,
+    "Qty": 840,
+    "Hour": 11,
+    "Min": 44,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "Trailing"
+}
+
+Harsh1 = {
+
+    "Name": "Dilip 1",
+    "Index": "FinNifty",
+    "Strike": 0,
+    "HedgeStrike": 500,
+    "StopLoss": 35,
+    "HedgeQty": 920,
+    "Qty": 760,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "Trailing"
+}
+Harsh2 = {
 
     "Name": "Dilip 2",
     "Index": "FinNifty",

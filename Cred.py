@@ -5,7 +5,7 @@ import pyotp
 
 Rishee = {
     "user": "FA95327",
-    "pwd": "1234@Zxcv",
+    "pwd": "1234@Qwer",
     "factor2": pyotp.TOTP('M72O2Y7O7X636A32467Q2BK7MPBH75L3').now(),
     "vc": "FA95327_U",
     "app_key": "36147c4e6f53b577738059d9b6efd3c4",
@@ -30,15 +30,15 @@ MyAccount = {
     "imei": "abc1234",
 
 }
-MyAccount2 = {
-    "user": "FA102383",
-    "pwd": "Acz934@",
-    "factor2": pyotp.TOTP('B3B27S5I7PQBOGW2465YK33DEK3T6TTD').now(),
-    "vc": "FA102383_U",
-    "app_key": "f709827d38cc15742ff05efb32e21bb6",
-    "imei": "abc1234",
+# MyAccount2 = {
+#     "user": "FA102383",
+#     "pwd": "Acz934@",
+#     "factor2": pyotp.TOTP('B3B27S5I7PQBOGW2465YK33DEK3T6TTD').now(),
+#     "vc": "FA102383_U",
+#     "app_key": "f709827d38cc15742ff05efb32e21bb6",
+#     "imei": "abc1234",
 
-}
+# }
 
 Riyaaz1 = {
     "user": "FA85815",
@@ -102,11 +102,21 @@ Sumit = {
     "app_key": "c0c4b64cd11eb088f807126b955c9598",
     "imei": "abc1234",
 }
+
 Dilip = {
     "user": "FA70057",
     "pwd": "1234@Zxcv",
     "factor2": pyotp.TOTP('M432377UBI25BQ6XQ32TRDUOGD7P3646').now(),
     "vc": "FA70057_U",
     "app_key": "7789ec505d72b96d5a794a0728bf1608",
+    "imei": "abc1234",
+}
+
+Harsh = {
+    "user": "FA80589",
+    "pwd": "1234@Qwer",
+    "factor2": pyotp.TOTP('K65335X3AZWRA3O5O5G7UM47MUS2T463').now(),
+    "vc": "FA80589_U",
+    "app_key": "8054c6c76ddaa4dde06ef9815ab207c0",
     "imei": "abc1234",
 }

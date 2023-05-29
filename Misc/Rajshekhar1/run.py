@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
+sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
 import pandas as pd
 import datetime
 import json

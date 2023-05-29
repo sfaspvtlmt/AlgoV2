@@ -1,4 +1,35 @@
 
+Harsh1 = {
+
+    "Name": "My Account",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 350,
+    "StopLoss": 35,
+    "HedgeQty": 650,
+    "Qty": 450,
+    "Hour": 9,
+    "Min": 44,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
+Harsh2 = {
+
+    "Name": "My Account 2",
+    "Index": "Nifty",
+    "Strike": 0,
+    "HedgeStrike": 350,
+    "StopLoss": 35,
+    "HedgeQty": 650,
+    "Qty": 450,
+    "Hour": 10,
+    "Min": 29,
+    "Seconds": 58,
+    "Type": "Intraday",
+    "SLType": "TrailToCost"
+}
+
 MyAccount = {
 
     "Name": "My Account",
@@ -53,8 +84,8 @@ Rishee2 = {
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 35,
-    "HedgeQty": 1300,
-    "Qty": 950,
+    "HedgeQty": 1450,
+    "Qty": 1000,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -68,8 +99,8 @@ Riyaaz1 = {
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 35,
-    "HedgeQty": 4200,
-    "Qty": 2950,
+    "HedgeQty": 4350,
+    "Qty": 3000,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -83,8 +114,8 @@ Riyaaz2 = {
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 35,
-    "HedgeQty": 3550,
-    "Qty": 2500,
+    "HedgeQty": 3450,
+    "Qty": 2450,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -98,7 +129,7 @@ Riyaaz3 = {
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 35,
-    "HedgeQty": 1550,
+    "HedgeQty": 1600,
     "Qty": 1150,
     "Hour": 11,
     "Min": 29,
@@ -233,8 +264,8 @@ Sumit1 = {
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 35,
-    "HedgeQty": 650,
-    "Qty": 450,
+    "HedgeQty": 700,
+    "Qty": 550,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -242,14 +273,14 @@ Sumit1 = {
     "SLType": "TrailToCost"
 }
 Sumit2 = {
-
+    
     "Name": "Sumit 2",
     "Index": "Nifty",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 35,
-    "HedgeQty": 650,
-    "Qty": 450,
+    "HedgeQty": 700,
+    "Qty": 550,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,

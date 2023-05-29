@@ -48,15 +48,15 @@ def ConnectApi(Cred):
     x = datetime.now().isoweekday()
 
     if (x == 1):
-        main.Main(Monday.Dilip1, api)
+        main.Main(Monday.Harsh2, api)
     elif (x == 2):
-        main.Main(Tuesday.Dilip1, api)
+        main.Main(Tuesday.Harsh2, api)
     elif (x == 3):
-        main.Main(Wednesday.Dilip1, api)
+        main.Main(Wednesday.Harsh2, api)
     elif (x == 4):
-        main.Main(Thursday.Dilip1, api)
+        main.Main(Thursday.Harsh2, api)
     elif (x == 5):
-        main.Main(Friday.Dilip1, api)
+        main.Main(Friday.Harsh2, api)
 
 
-ConnectApi(Cred.Dilip)
+ConnectApi(Cred.Harsh)

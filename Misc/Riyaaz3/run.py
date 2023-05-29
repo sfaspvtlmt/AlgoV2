@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
+sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
 
 from datetime import datetime
 import main

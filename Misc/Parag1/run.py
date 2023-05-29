@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
+sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
 from Variables import Monday
 import time
 from NorenRestApiPy.NorenApi import NorenApi

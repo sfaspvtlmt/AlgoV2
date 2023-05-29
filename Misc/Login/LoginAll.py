@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
+sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
 
 from NorenRestApiPy.NorenApi import  NorenApi
 import pyotp
@@ -44,8 +44,11 @@ def ConnectApi(Cred):
     
 
 
+ConnectApi(Cred.MyAccount)
 ConnectApi(Cred.Sumit)
-ConnectApi(Cred.Rajshekhar)
-ConnectApi(Cred.Vijet)
-ConnectApi(Cred.Parag)
-ConnectApi(Cred.Dilip)
+ConnectApi(Cred.Harsh)
+# ConnectApi(Cred.Sumit)
+# ConnectApi(Cred.Rajshekhar)
+# ConnectApi(Cred.Vijet)
+# ConnectApi(Cred.Parag)
+# ConnectApi(Cred.Dilip)

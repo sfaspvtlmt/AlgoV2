@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"C:\Users\arush\Documents\AlgoV2")
+sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
 import Cred
 from NorenRestApiPy.NorenApi import  NorenApi
 import json
@@ -37,4 +37,5 @@ def ConnectApi(Cred):
     print(api.get_limits())
 
 
-ConnectApi(Cred.MyAccount)
+# ConnectApi(Cred.MyAccount)
+ConnectApi(Cred.Harsh)
