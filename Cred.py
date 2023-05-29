@@ -30,15 +30,15 @@ MyAccount = {
     "imei": "abc1234",
 
 }
-# MyAccount2 = {
-#     "user": "FA102383",
-#     "pwd": "Acz934@",
-#     "factor2": pyotp.TOTP('B3B27S5I7PQBOGW2465YK33DEK3T6TTD').now(),
-#     "vc": "FA102383_U",
-#     "app_key": "f709827d38cc15742ff05efb32e21bb6",
-#     "imei": "abc1234",
+MyAccount2 = {
+    "user": "FA102383",
+    "pwd": "Acz934@",
+    "factor2": pyotp.TOTP('B3B27S5I7PQBOGW2465YK33DEK3T6TTD').now(),
+    "vc": "FA102383_U",
+    "app_key": "f709827d38cc15742ff05efb32e21bb6",
+    "imei": "abc1234",
 
-# }
+}
 
 Riyaaz1 = {
     "user": "FA85815",
