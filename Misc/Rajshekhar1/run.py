@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
+sys.path.append(r"/Users/crosshair/Documents/GitHub/AlgoV2/")
 import pandas as pd
 import datetime
 import json
@@ -22,7 +22,7 @@ from Variables import Monday
 api = None
 
 def ConnectApi(Cred):
-    f = open(str("Misc/Login/"+Cred["user"])+'.txt', 'r')
+    f = open(str("/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/"+Cred["user"])+'.txt', 'r')
     usertoken = f.read()
     global api
     

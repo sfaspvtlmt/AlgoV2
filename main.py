@@ -15,7 +15,7 @@ def Main(Variables, api):
 
     while True:
         now = datetime.datetime.now()
-        system('cls')
+        system('clear')
         print(Store.status)
         print(Variables["Name"])
         print(now.hour, ":", now.minute, ":", now.second)

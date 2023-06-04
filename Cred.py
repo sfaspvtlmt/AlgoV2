@@ -120,3 +120,42 @@ Harsh = {
     "app_key": "8054c6c76ddaa4dde06ef9815ab207c0",
     "imei": "abc1234",
 }
+Rahul = {
+    "user": "FA126643",
+    "pwd": "1234@Qwer",
+    "factor2": pyotp.TOTP('4LV6NEZI275P6E745YZFW544UF2EM4GX').now(),
+    "vc": "FA126643_U",
+    "app_key": "39508a48b84c0011c5df218e3f17f20d",
+    "imei": "abc1234",
+}
+
+
+# Zerodha 
+Sanam ={
+    "api_key": "09xgdl43pfu32868",
+    "api_secret": "mqk4flovwnsqwj6z6fs0j37tg4mlwept",
+    "user_id": "FAB769",
+    "user_pwd": "Sanam@123", 
+    "totp_key": "SC6Y45TFVLFJAN74CVWT3VF7XKFQCRXY"
+}
+Manjunath ={
+    "api_key": "galry97rse4q0okj",
+    "api_secret": "wo2mmx4bhveyjdzpgdj570ignndayqbj",
+    "user_id": "DGY707",
+    "user_pwd": "tradelibrary",
+    "totp_key": "Z5TTYXL6W4YXJNYQSPLDVQ2L6KEYYXAK"
+}
+Ankit ={
+    "api_key": "1zhx57joevkya3sz",
+    "api_secret": "lgubxow59ladllm2yffkhjewjbawss03",
+    "user_id": "RA2737",
+    "user_pwd": "1234@Qwer",
+    "totp_key": "ZEVNAJX7CCL47SFRK6USXKM3PILBBCFN"
+}
+Milan ={
+    "api_key": "skdrd7t77y57fp61",
+    "api_secret": "c735aiqmwgunzaxpjgmlkb50p71kyj6w",
+    "user_id": "JL2513",
+    "user_pwd": "1234@Qwer",
+    "totp_key": "UXI2CQXJO675FDJAA2ZWNHODJ3NBZO65"
+}

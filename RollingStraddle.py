@@ -261,7 +261,7 @@ def sl(api, Variables):
         now = datetime.datetime.now()
 
         while socket_opened:
-            os.system('cls')
+            os.system('clear')
             print(Variables["Name"])
             print(now.hour, ":", now.minute, ":", now.second)
             print(Store.status)

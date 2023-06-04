@@ -40,7 +40,7 @@ def Search(api, Variables):
     Store.Price['PE'] = float(Variables["PricePE"])
     Store.stopLoss['PE'] = math.ceil(
         float(Variables["PricePE"]) * (1 + Variables["StopLoss"]/100))
-    system('cls')
+    system('clear')
 
     print(Store.Price)
     print(Store.stopLoss)

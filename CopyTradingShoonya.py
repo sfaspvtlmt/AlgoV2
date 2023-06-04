@@ -51,7 +51,7 @@ def sl(api):
         now = datetime.datetime.now()
 
         while socket_opened:
-            # os.system('cls')
+            # os.system('clear')
             # print("Running")
             sleep(1)
             break

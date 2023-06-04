@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
+sys.path.append(r"/Users/crosshair/Documents/GitHub/AlgoV2/")
 import Cred
 from NorenRestApiPy.NorenApi import  NorenApi
 import json

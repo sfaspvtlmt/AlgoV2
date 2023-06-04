@@ -39,7 +39,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-05-16"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-06-01"
                     }
 
     # Define the new data to replace or insert
@@ -88,11 +88,7 @@ def Main( Cred):
     result = my_collection.update_one(search_criteria, {"$set": new_data}, upsert=True)
     
     
-    # Print the result of the operation
-    # print("Matched count:", result.matched_count)
-    # print("Modified count:", result.modified_count)
-    # print("Upserted ID:", result.upserted_id)
-        
+   
 Main( Cred.MyAccount)
 Main( Cred.MyAccount2)
 Main( Cred.Riyaaz1)
@@ -105,3 +101,4 @@ Main( Cred.Sumit)
 Main( Cred.Dilip)
 Main( Cred.Rishee)
 Main( Cred.Rishee2)
+Main( Cred.Harsh)

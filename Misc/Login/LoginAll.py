@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append(r"C:\Users\Arush Sarna\Documents\GitHub\AlgoV2")
+sys.path.append(r"/Users/crosshair/Documents/GitHub/AlgoV2/")
 
 from NorenRestApiPy.NorenApi import  NorenApi
 import pyotp
@@ -35,7 +35,7 @@ def ConnectApi(Cred):
     
     #print(f"login_status = {login_status}")
     print(login_status)
-    f=open("Misc/Login/" +str(Cred["user"])+'.txt','w')
+    f=open("/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/" +str(Cred["user"])+'.txt','w')
     f.write(login_status.get('susertoken'))
     f.close()
 
@@ -47,8 +47,16 @@ def ConnectApi(Cred):
 ConnectApi(Cred.MyAccount)
 ConnectApi(Cred.Sumit)
 ConnectApi(Cred.Harsh)
-# ConnectApi(Cred.Sumit)
-# ConnectApi(Cred.Rajshekhar)
-# ConnectApi(Cred.Vijet)
-# ConnectApi(Cred.Parag)
-# ConnectApi(Cred.Dilip)
+ConnectApi(Cred.Sumit)
+ConnectApi(Cred.Rajshekhar)
+ConnectApi(Cred.Vijet)
+ConnectApi(Cred.Parag)
+ConnectApi(Cred.Dilip)
+ConnectApi(Cred.Riyaaz1)
+ConnectApi(Cred.Riyaaz2)
+ConnectApi(Cred.Riyaaz3)
+ConnectApi(Cred.MyAccount)
+ConnectApi(Cred.MyAccount2)
+ConnectApi(Cred.Rishee2)
+ConnectApi(Cred.Rishee)
+ConnectApi(Cred.Rahul)
