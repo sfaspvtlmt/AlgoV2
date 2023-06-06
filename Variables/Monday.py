@@ -3,12 +3,12 @@
 MyAccount = {
 
     "Name": "My Account 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 480,
-    "Qty": 360,
+    "HedgeQty": 2800,
+    "Qty": 200,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -19,12 +19,12 @@ MyAccount = {
 MyAccount2 = {
 
     "Name": "My Account 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 480,
-    "Qty": 360,
+    "HedgeQty": 280,
+    "Qty": 200,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -36,7 +36,7 @@ MyAccount2 = {
 Rishee = {
 
     "Name": "Rishee 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
@@ -52,7 +52,7 @@ Rishee = {
 Rishee2 = {
 
     "Name": "Rishee 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
@@ -67,12 +67,12 @@ Rishee2 = {
 Riyaaz1 = {
 
     "Name": "Riyaaz 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 4320,
-    "Qty": 3000,
+    "HedgeQty": 4600,
+    "Qty": 3240,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -82,12 +82,12 @@ Riyaaz1 = {
 Riyaaz2 = {
 
     "Name": "Riyaaz 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 3440,
-    "Qty": 2440,
+    "HedgeQty": 3760,
+    "Qty": 2640,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -97,12 +97,12 @@ Riyaaz2 = {
 Riyaaz3 = {
 
     "Name": "Riyaaz 3",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 1800,
-    "Qty": 1280,
+    "HedgeQty": 2000,
+    "Qty": 1400,
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
@@ -112,12 +112,12 @@ Riyaaz3 = {
 Vijet1 = {
 
     "Name": "Vijet 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 2880,
-    "Qty": 2000,
+    "HedgeQty": 2840,
+    "Qty": 1960,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -127,12 +127,12 @@ Vijet1 = {
 Vijet2 = {
 
     "Name": "Vijet 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 2880,
-    "Qty": 2000,
+    "HedgeQty": 2740,
+    "Qty": 1960,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -142,12 +142,12 @@ Vijet2 = {
 Parag1 = {
 
     "Name": "Parag 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 1440,
-    "Qty": 1000,
+    "HedgeQty": 2080,
+    "Qty": 1440,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -157,12 +157,12 @@ Parag1 = {
 Parag2 = {
 
     "Name": "Parag 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 1440,
-    "Qty": 1000,
+    "HedgeQty": 2080,
+    "Qty": 1440,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -172,12 +172,12 @@ Parag2 = {
 Rajshekhar1 = {
 
     "Name": "Rajshekhar 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 2880,
-    "Qty": 2000,
+    "HedgeQty": 3000,
+    "Qty": 2080,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -187,12 +187,12 @@ Rajshekhar1 = {
 Rajshekhar2 = {
 
     "Name": "Rajshekhar 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 2880,
-    "Qty": 2000,
+    "HedgeQty": 3000,
+    "Qty": 2080,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -202,11 +202,11 @@ Rajshekhar2 = {
 Sumit1 = {
 
     "Name": "Sumit 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 640,
+    "HedgeQty": 680,
     "Qty": 480,
     "Hour": 9,
     "Min": 19,
@@ -217,11 +217,11 @@ Sumit1 = {
 Sumit2 = {
 
     "Name": "Sumit 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 640,
+    "HedgeQty": 680,
     "Qty": 480,
     "Hour": 9,
     "Min": 44,
@@ -232,12 +232,12 @@ Sumit2 = {
 Harsh1 = {
 
     "Name": "Harsh 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 1680,
-    "Qty": 1160,
+    "HedgeQty": 1720,
+    "Qty": 1200,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -247,12 +247,12 @@ Harsh1 = {
 Harsh2 = {
 
     "Name": "Harsh 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 1680,
-    "Qty": 1160,
+    "HedgeQty": 1720,
+    "Qty": 1200,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
@@ -263,12 +263,12 @@ Harsh2 = {
 Dilip1 = {
 
     "Name": "Dilip 1",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 30,
-    "HedgeQty": 1320,
-    "Qty": 960,
+    "HedgeQty": 1400,
+    "Qty": 1000,
     "Hour": 9,
     "Min": 19,
     "Seconds": 58,
@@ -278,12 +278,12 @@ Dilip1 = {
 Dilip2 = {
 
     "Name": "Dilip 2",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 350,
     "StopLoss": 15,
-    "HedgeQty": 1320,
-    "Qty": 960,
+    "HedgeQty": 1400,
+    "Qty": 1000,
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,

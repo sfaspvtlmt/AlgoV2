@@ -12,6 +12,18 @@ ZerodhaApiStore =[]
 
 
 
+def formatINR(number):
+    number = float(number)
+    number = round(number,2)
+    is_negative = number < 0
+    number = abs(number)
+    s, *d = str(number).partition(".")
+    r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
+    value = "".join([r] + d)
+    if is_negative:
+       value = '-' + value
+    return '₹ '+ value
+
 def CreateApi(Credentials):
     api = None
     global ApiStore
@@ -65,19 +77,22 @@ CreateApi(Cred.Riyaaz3)
 CreateApi(Cred.Rishee)
 CreateApi(Cred.Rishee2)
 CreateApi(Cred.MyAccount)
-CreateApi(Cred.MyAccount2)  
 ZerodhaApi(Cred.Ankit)
 ZerodhaApi(Cred.Manjunath)
 ZerodhaApi(Cred.Sanam)
 ZerodhaApi(Cred.Milan)
+ZerodhaApi(Cred.Nirmal)
 
 def CapitalZerodha(api):
         capital = api.margins()
-        capital = (capital.get("equity").get("available").get("cash") + (api.margins()).get("equity").get("available").get("collateral"))
+        # print(capital)
+        capital = (capital.get("equity").get("available").get("cash") + (capital).get("equity").get("available").get("collateral"))
         return capital
 
 def CapitalShoonya(api):
+    
     limits = api.get_limits()
+    # print(limits)
     
     capital = float(limits['collateral'] if  'collateral' in limits else 0)+ float(limits['cash'])+float(limits['payin'])
     return capital
@@ -135,7 +150,9 @@ while(True):
          j = j+1
         
     os.system('clear')  
-    print("PNL: ",PNL*2 , "Capital: ", (shoonyaCapital + zerodhaCapital)*2)
+    # print(locale.currency(100.52, grouping=True))
+
+    print("PNL: ",formatINR(PNL*2) , "Capital: ", formatINR((shoonyaCapital + zerodhaCapital)*2) ,round(PNL/(shoonyaCapital + zerodhaCapital)*100,2) ," %")
         
         
     

@@ -14,7 +14,7 @@ def start():
     print("Monday ON")
   
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/LoginAll.py'])
-    time.sleep(10)
+    time.sleep(15)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount/run.py'])
     time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount2/run.py'])

@@ -39,7 +39,7 @@ def Main( Cred):
     my_db = client["Cult"]
     my_collection = my_db["ProfitNLoss"]
     now = datetime.now()
-    search_criteria = {"ClientID": Cred['user'], "Date": "2023-06-01"
+    search_criteria = {"ClientID": Cred['user'], "Date": "2023-06-05"
                     }
 
     # Define the new data to replace or insert
@@ -90,7 +90,7 @@ def Main( Cred):
     
    
 Main( Cred.MyAccount)
-Main( Cred.MyAccount2)
+# Main( Cred.MyAccount2)
 Main( Cred.Riyaaz1)
 Main( Cred.Riyaaz2)
 Main( Cred.Riyaaz3)

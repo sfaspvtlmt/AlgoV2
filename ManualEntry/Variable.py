@@ -3,7 +3,7 @@
 MyAccount = {
 
     "Name": "My Account",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 400,
     "StopLoss": 30,
@@ -22,7 +22,7 @@ MyAccount = {
 Rishee = {
 
     "Name": "My Account",
-    "Index": "FinNifty",
+    "Index": "FINNIFTY",
     "Strike": 0,
     "HedgeStrike": 500,
     "StopLoss": 15,
@@ -41,7 +41,7 @@ Rishee = {
 Riyaaz2 = {
 
     "Name": "Riyaaz 2",
-    "Index": "Nifty",
+    "Index": "NIFTY",
     "Strike": 0,
     "HedgeStrike": 600,
     "StopLoss": 15,

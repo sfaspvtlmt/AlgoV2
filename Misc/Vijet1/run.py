@@ -9,21 +9,23 @@ import datetime
 import json
 from datetime import datetime
 import main
-from Variables import Friday
-from Variables import Thursday
-from Variables import Wednesday
-from Variables import Tuesday
+# from Variables import Friday
+# from Variables import Thursday
+# from Variables import Wednesday
+# from Variables import Tuesday
 
 
 # update the user token generated during first script execution
 
 api = None
+Day =None
 
 
 def ConnectApi(Cred):
     f = open(str("/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/"+Cred["user"])+'.txt', 'r')
     usertoken = f.read()
     global api
+    global Day
 
     try:
         class ShoonyaApiPy(NorenApi):
@@ -44,19 +46,24 @@ def ConnectApi(Cred):
     login_status = api.set_session(
         userid=Cred["user"], password=Cred["pwd"], usertoken=usertoken)
 
-    print(api.get_limits())
     x = datetime.now().isoweekday()
-
     if (x == 1):
-        main.Main(Monday.Vijet1, api)
+        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Monday.json") as f:
+         Day = json.load(f)
     elif (x == 2):
-        main.Main(Tuesday.Vijet1, api)
+        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Tuesday.json") as f:
+         Day = json.load(f)
     elif (x == 3):
-        main.Main(Wednesday.Vijet1, api)
+        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Wednesday.json") as f:
+         Day = json.load(f)
     elif (x == 4):
-        main.Main(Thursday.Vijet1, api)
+        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Thursday.json") as f:
+         Day = json.load(f)
     elif (x == 5):
-        main.Main(Friday.Vijet1, api)
+        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Friday.json") as f:
+         Day = json.load(f)
 
 
 ConnectApi(Cred.Vijet)
+Day = Day['Vijet1']
+main.Main(Day , api)

@@ -9,9 +9,8 @@ import Store
 
 
 def Main(Variables, api):
-    print(Store)
 
-   
+    print(Variables)
 
     while True:
         now = datetime.datetime.now()

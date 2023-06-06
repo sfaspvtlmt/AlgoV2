@@ -159,3 +159,10 @@ Milan ={
     "user_pwd": "1234@Qwer",
     "totp_key": "UXI2CQXJO675FDJAA2ZWNHODJ3NBZO65"
 }
+Nirmal ={
+    "api_key": "u7lbgngfmsy6pzrj",
+    "api_secret": "1lt2555049kwo9n0ge3w2nsdclzauc2w",
+    "user_id": "MO2295",
+    "user_pwd": "Ashish@1980",
+    "totp_key": "S2I2H3RRSKXELTKMGDBYOWADW4CGSYTS"
+}

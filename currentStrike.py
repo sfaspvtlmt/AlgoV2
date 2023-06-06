@@ -4,7 +4,7 @@ import math
 
 def currentStrike(api , index):
 
-    if(index =="BankNifty"):
+    if(index =="BANKNIFTY"):
       res = api.get_quotes("NSE", "Nifty Bank")
       ltp = float(res['lp'])
       mod = int(ltp) % 100
@@ -13,7 +13,7 @@ def currentStrike(api , index):
       else:
             atmStrike = int(math.ceil(ltp/100))*100
 
-    elif(index =="Nifty"):   
+    elif(index =="NIFTY"):   
       res = api.get_quotes("NSE", "Nifty 50")
       ltp = float(res['lp'])
       mod = int(ltp) % 50
@@ -22,7 +22,7 @@ def currentStrike(api , index):
       else:
             atmStrike = int(math.ceil(ltp/50))*50
 
-    elif(index =="FinNifty"):   
+    elif(index =="FINNIFTY"):   
       res = api.get_quotes("NSE", "Nifty Fin Service")
       ltp = float(res['lp'])
       mod = int(ltp) % 50

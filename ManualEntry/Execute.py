@@ -238,14 +238,14 @@ def sl(api, Variables):
     xd = api
     global minQty
     global maxQty
-    if (Var["Index"] == "BankNifty"):
+    if (Var["Index"] == "BANKNIFTY"):
         minQty = 25
         maxQty = 1200
-    if (Var["Index"] == "FinNifty"):
+    if (Var["Index"] == "FINNIFTY"):
         minQty = 40
         maxQty = 1800
 
-    if (Var["Index"] == "Nifty"):
+    if (Var["Index"] == "NIFTY"):
         minQty = 50
         maxQty = 1800
 
