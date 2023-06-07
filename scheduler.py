@@ -14,7 +14,7 @@ def start():
     print("Monday ON")
   
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/LoginAll.py'])
-    time.sleep(15)
+    time.sleep(20)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount/run.py'])
     time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount2/run.py'])
@@ -65,7 +65,7 @@ schedule.every().thursday.at("09:30").do(start)
 schedule.every().friday.at("10:19:30").do(start)
 # schedule.every().saturday.at("13:43").do(start)
 # schedule.every().sunday.at("11:59").do(Thursday)
-# start()
+start()
 while 1:
     now = datetime.datetime.now()
     os.system('clear')

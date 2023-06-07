@@ -16,7 +16,7 @@ def event_handler_order_update(message):
 
 
 def event_handler_quote_update(message):
-    if (Var["Type"] == "Intraday"):
+    if (Var["Type"] == "MIS"):
         Type = "I"
     else:
         Type = "M"

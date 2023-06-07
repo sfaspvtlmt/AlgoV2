@@ -11,7 +11,7 @@ Harsh1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Harsh2 = {
@@ -26,7 +26,7 @@ Harsh2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 
@@ -42,7 +42,7 @@ MyAccount = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 MyAccount2 = {
@@ -57,7 +57,7 @@ MyAccount2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 
@@ -73,7 +73,7 @@ Rishee = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 
@@ -89,7 +89,7 @@ Rishee2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Riyaaz1 = {
@@ -104,7 +104,7 @@ Riyaaz1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Riyaaz2 = {
@@ -119,7 +119,7 @@ Riyaaz2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Riyaaz3 = {
@@ -134,7 +134,7 @@ Riyaaz3 = {
     "Hour": 11,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Vijet1 = {
@@ -149,7 +149,7 @@ Vijet1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Vijet2 = {
@@ -164,7 +164,7 @@ Vijet2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Parag1 = {
@@ -179,7 +179,7 @@ Parag1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Parag2 = {
@@ -194,7 +194,7 @@ Parag2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Dilip1 = {
@@ -209,7 +209,7 @@ Dilip1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Dilip2 = {
@@ -224,7 +224,7 @@ Dilip2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Rajshekhar1 = {
@@ -239,7 +239,7 @@ Rajshekhar1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Rajshekhar2 = {
@@ -254,7 +254,7 @@ Rajshekhar2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Sumit1 = {
@@ -269,7 +269,7 @@ Sumit1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Sumit2 = {
@@ -284,6 +284,6 @@ Sumit2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }

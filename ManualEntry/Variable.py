@@ -15,7 +15,7 @@ MyAccount = {
     "atmStrike": 17950,
     "PriceCE": 84,
     "PricePE": 73,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -33,7 +33,7 @@ Rishee = {
     "atmStrike": 18000,
     "PriceCE": 73,
     "PricePE": 70,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -52,6 +52,6 @@ Riyaaz2 = {
     "atmStrike": 17450,
     "PriceCE": 95.25,
     "PricePE": 80.5,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }

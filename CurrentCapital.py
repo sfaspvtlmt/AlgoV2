@@ -4,6 +4,7 @@ import Cred
 from NorenRestApiPy.NorenApi import NorenApi
 from kiteconnect import KiteConnect
 import os
+import threading
 
 # x = datetime.now().isoweekday()
 global ApiStore
@@ -51,7 +52,6 @@ def CreateApi(Credentials):
         userid=Credentials["user"], password=Credentials["pwd"], usertoken=usertoken)
 
    
-    
     ApiStore.append(api)
     
     
@@ -61,11 +61,13 @@ def ZerodhaApi(Credentials):
     Credentials['access_token'] = file.read()
     api = KiteConnect(api_key=Credentials["api_key"])
     api.set_access_token(Credentials["access_token"])
+    # print(api.margins())
     ZerodhaApiStore.append(api)
-
+ 
 CreateApi(Cred.MyAccount)
 CreateApi(Cred.Sumit)
 CreateApi(Cred.Harsh)
+CreateApi(Cred.Sumit)
 CreateApi(Cred.Rajshekhar)
 CreateApi(Cred.Vijet)
 CreateApi(Cred.Parag)
@@ -75,6 +77,7 @@ CreateApi(Cred.Riyaaz2)
 CreateApi(Cred.Riyaaz3)
 CreateApi(Cred.Rishee)
 CreateApi(Cred.Rishee2)
+CreateApi(Cred.MyAccount)
 ZerodhaApi(Cred.Ankit)
 ZerodhaApi(Cred.Manjunath)
 ZerodhaApi(Cred.Sanam)
@@ -83,6 +86,7 @@ ZerodhaApi(Cred.Nirmal)
 
 def CapitalZerodha(api):
         capital = api.margins()
+        print(capital)
         # print(capital)
         capital = (capital.get("equity").get("available").get("cash") + (capital).get("equity").get("available").get("collateral"))
         return capital
@@ -90,6 +94,9 @@ def CapitalZerodha(api):
 def CapitalShoonya(api):
     
     limits = api.get_limits()
+    # print(limits)
+    # print(limits)
+
     # print(limits)
     
     capital = float(limits['collateral'] if  'collateral' in limits else 0)+ float(limits['cash'])+float(limits['payin'])
@@ -100,20 +107,17 @@ zerodhaCapital =0
 
 for api in ZerodhaApiStore:
         # print(api.margins())
-        # print()
-   zerodhaCapital = zerodhaCapital+ CapitalZerodha(api)
+        print()
+#    zerodhaCapital = zerodhaCapital+ CapitalZerodha(api)
    
 for api in ApiStore:
-   shoonyaCapital = shoonyaCapital+ CapitalShoonya(api)
+    print()
+#    shoonyaCapital = shoonyaCapital+ CapitalShoonya(api)
 
-
-while(True):
-    PNL =0
-    k  =0 
-    j=0
-    
-    while (k<len(ApiStore)):
+def func(k):
+         Capital = CapitalShoonya(ApiStore[k])
          ret = ApiStore[k].get_positions()
+         UID = (ApiStore[k].get_order_book())
          day_m2m =0 
          mtm = 0
          pnl = 0
@@ -126,31 +130,40 @@ while(True):
              
           if(day_m2m ==None):
                day_m2m =0
-         PNL = PNL+day_m2m
-        #  print("Day M2M:",day_m2m)
+         print(Capital+day_m2m, UID[0]['uid'])
 
-         k= k+1
-         
-    while(j< len(ZerodhaApiStore)):
-         positions = ZerodhaApiStore[j].positions() 
-         net =positions.get("net")
-         day =positions.get("day")
-         i=0
 
-         day_m2m=0
-         while(i<len(net)):
-          day_m2m += net[i].get("pnl")
-          i=i+1
-         while(i<len(day)):
-          day_m2m += day[i].get("pnl")
-          i=i+1
-         PNL = PNL + day_m2m
-         j = j+1
+k=0
+while (k<len(ApiStore)):
+        t1 = threading.Thread(target = func , args=[k])
+        print("in")
+        t1.start()
+        t1.join()
+        print(k)
         
-    os.system('clear')  
+
+        k= k+1
+         
+    # while(j< len(ZerodhaApiStore)):
+    #      positions = ZerodhaApiStore[j].positions() 
+    #      net =positions.get("net")
+    #      day =positions.get("day")
+    #      i=0
+
+    #      day_m2m=0
+    #      while(i<len(net)):
+    #       day_m2m += net[i].get("pnl")
+    #       i=i+1
+    #      while(i<len(day)):
+    #       day_m2m += day[i].get("pnl")
+    #       i=i+1
+    #      PNL = PNL + day_m2m
+    #      j = j+1
+        
+    # os.system('clear')  
     # print(locale.currency(100.52, grouping=True))
 
-    print("PNL: ",formatINR(PNL*2) , "Capital: ", formatINR((shoonyaCapital + zerodhaCapital)*2) ,round(PNL/(shoonyaCapital + zerodhaCapital)*100,2) ," %")
+    # print("PNL: ",formatINR(PNL*2) , "Capital: ", formatINR((shoonyaCapital + zerodhaCapital)*2) ,round(PNL/(shoonyaCapital + zerodhaCapital)*100,2) ," %")
         
         
     

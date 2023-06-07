@@ -12,7 +12,7 @@ MyAccount = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -28,7 +28,7 @@ MyAccount2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -44,7 +44,7 @@ Rishee = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -60,7 +60,7 @@ Rishee2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Riyaaz1 = {
@@ -75,7 +75,7 @@ Riyaaz1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Riyaaz2 = {
@@ -90,7 +90,7 @@ Riyaaz2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Riyaaz3 = {
@@ -105,7 +105,7 @@ Riyaaz3 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Vijet1 = {
@@ -120,7 +120,7 @@ Vijet1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Vijet2 = {
@@ -135,7 +135,7 @@ Vijet2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Parag1 = {
@@ -150,7 +150,7 @@ Parag1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Parag2 = {
@@ -165,7 +165,7 @@ Parag2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Rajshekhar1 = {
@@ -180,7 +180,7 @@ Rajshekhar1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Rajshekhar2 = {
@@ -195,7 +195,7 @@ Rajshekhar2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Sumit1 = {
@@ -210,7 +210,7 @@ Sumit1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Sumit2 = {
@@ -225,7 +225,7 @@ Sumit2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -241,7 +241,7 @@ Dilip1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Dilip2 = {
@@ -256,7 +256,7 @@ Dilip2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 
@@ -272,7 +272,7 @@ Harsh1 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }
 Harsh2 = {
@@ -287,6 +287,6 @@ Harsh2 = {
     "Hour": 11,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "Trailing"
 }

@@ -77,7 +77,7 @@ Rishee = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 
@@ -93,7 +93,7 @@ Rishee2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Riyaaz1 = {
@@ -273,7 +273,7 @@ Dilip1 = {
     "Hour": 9,
     "Min": 44,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
 Dilip2 = {
@@ -288,6 +288,6 @@ Dilip2 = {
     "Hour": 10,
     "Min": 29,
     "Seconds": 58,
-    "Type": "Intraday",
+    "Type": "MIS",
     "SLType": "TrailToCost"
 }
