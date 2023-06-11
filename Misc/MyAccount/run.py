@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"/Users/crosshair/Documents/GitHub/AlgoV2/")
+sys.path.append(r"/AlgoV2/")
 from Variables import Monday
 import time
 from NorenRestApiPy.NorenApi import NorenApi
