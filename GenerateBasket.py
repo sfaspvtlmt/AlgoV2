@@ -18,7 +18,7 @@ basket.set_access_token(Cred.Manjunath["access_token"])
 
 
 Day = datetime.now().isoweekday()
-Day =1
+# Day =1
 
 if(Day == 1):
     ltp = (basket.ltp('NSE:NIFTY 50')).get('NSE:NIFTY 50').get('last_price')
@@ -27,32 +27,32 @@ if(Day == 1):
     month = "6"
     expiryDate = "13"
     HedgeStrike=350  
-    i=50
+    i=0
 
     JSONFILE={}
     type1={
         "StopLoss":35,
         "Hour": 9,
+        "Min": 19,
+        "Seconds": 59,
+        "Type":"NRML",
+        "SLType": "Trailing"
+    }
+    type2={
+        "StopLoss":15,
+        "Hour": 9,
         "Min": 44,
         "Seconds": 59,
         "Type":"NRML",
-        "SLType": "TrailToCost"
+        "SLType": "Trailing"
     }
-    type2={
+    type3={
         "StopLoss":35,
         "Hour": 10,
         "Min": 29,
         "Seconds": 59,
         "Type":"NRML",
-        "SLType": "TrailToCost"
-    }
-    type3={
-        "StopLoss":35,
-        "Hour": 11,
-        "Min": 29,
-        "Seconds": 59,
-        "Type":"NRML",
-        "SLType": "TrailToCost"
+        "SLType": "Trailing"
     }
 elif(Day==2):
     ltp = (basket.ltp('NSE:NIFTY 50')).get('NSE:NIFTY 50').get('last_price')
