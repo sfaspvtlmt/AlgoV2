@@ -16,6 +16,10 @@ def event_handler_order_update(message):
 
 
 def event_handler_quote_update(message):
+    global lastWebsocketTime
+    lastWebsocketTime= datetime.datetime.now().strftime("%H:%M:%S")
+    print(lastWebsocketTime)
+
     if (Var["Type"] == "MIS"):
         Type = "I"
     else:
@@ -221,6 +225,8 @@ def event_handler_quote_update(message):
 
 def open_callback():
     socket_opened = True
+    global lastWebsocketTime
+    lastWebsocketTime= datetime.datetime.now().strftime("%H:%M:%S")
 
     print('app is connected')
 
@@ -230,6 +236,10 @@ def open_callback():
 
 
 def sl(api, Variables):
+    global lastWebsocketTime
+    lastWebsocketTime= datetime.datetime.now().strftime("%H:%M:%S")
+
+    
     global Var
     Var = Variables
     global socket_opened
@@ -255,8 +265,21 @@ def sl(api, Variables):
                        subscribe_callback=event_handler_quote_update, socket_open_callback=open_callback)
 
     while socket_opened:
+        
 
         now = datetime.datetime.now()
+        # lastWebsocketTime= datetime.datetime.now().strftime("%H:%M:%S")
+        currentTime = now.strftime("%H:%M:%S")
+        print(currentTime)
+        print(lastWebsocketTime)
+        t2 = datetime.datetime.strptime(currentTime, "%H:%M:%S")
+        t1 = datetime.datetime.strptime(lastWebsocketTime, "%H:%M:%S")
+        delta = t2 - t1
+        print(delta.total_seconds())
+        if(delta.total_seconds()>2):
+                xd.unsubscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
+                xd.subscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
+
 
         while socket_opened:
             os.system('clear')

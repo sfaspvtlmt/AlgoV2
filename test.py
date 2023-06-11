@@ -1,33 +1,25 @@
-import time 
-import random
-import os 
-while (True):
-    
-    print("Scanning For IV Spike")
-    print("------------------------------------------------------------------")
-    print(" ")
-    print("Total No. of Spikes Caught: 8" )
-    print("------------------------------------------------------------------")
-    print(" ")
-    
-    print("Margin Calculation Completed , Hedge / Position Ratio: 1.2")
-    print("------------------------------------------------------------------")
-    print(" ")
-    print( "Call Delta: " ,random.randint(20,30)/100)
-    print(" ")
+from datetime import datetime
+import time
+# start time
+now = datetime.now()
+now = now.strftime("%H:%M:%S")
 
-    print( "Put Delta: " ,-random.randint(20,30)/100)
-    print("------------------------------------------------------------------")
-    print("")
-    print("Current Margin Utilized On Deployed Capital: 95%" )
-    print("")
-    print("Buy Two Strikes Away Hedges , To make Margin Utilized Under 70%")
-    print("")
 
-    
-    
-    
-    
-    time.sleep(6)
-    os.system('clear')
-    
+# convert time string to datetime
+t1 = datetime.strptime(now, "%H:%M:%S")
+print('Start time:', t1.time())
+time.sleep(2)
+now = datetime.now()
+now = now.strftime("%H:%M:%S")
+t2 = datetime.strptime(now, "%H:%M:%S")
+print('End time:', t2.time())
+
+# get difference
+delta = t2 - t1
+
+# time difference in seconds
+print(2==delta.total_seconds())
+
+# time difference in milliseconds
+ms = delta.total_seconds() * 1000
+print(f"Time difference is {ms} milliseconds")
