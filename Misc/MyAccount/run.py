@@ -47,7 +47,7 @@ def ConnectApi(Cred):
         userid=Cred["user"], password=Cred["pwd"], usertoken=usertoken)
 
     x = datetime.now().isoweekday()
-    # x=1
+    x=1
     if (x == 1):
         with open("/home/ec2-user/AlgoV2/Variables/Monday.json") as f:
          Day = json.load(f)
