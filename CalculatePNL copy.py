@@ -4,7 +4,8 @@ import Cred
 from NorenRestApiPy.NorenApi import NorenApi
 from kiteconnect import KiteConnect
 import os
-
+import time
+import threading
 # x = datetime.now().isoweekday()
 global ApiStore
 ApiStore =[]
@@ -105,15 +106,13 @@ for api in ZerodhaApiStore:
    
 for api in ApiStore:
    shoonyaCapital = shoonyaCapital+ CapitalShoonya(api)
+   
 
-
-while(True):
-    PNL =0
-    k  =0 
-    j=0
+Stats ={
     
-    while (k<len(ApiStore)):
-         ret = ApiStore[k].get_positions()
+}
+def CalculateShoonyaPNL(api):
+         ret = api.get_positions()
          day_m2m =0 
          mtm = 0
          pnl = 0
@@ -126,12 +125,9 @@ while(True):
              
           if(day_m2m ==None):
                day_m2m =0
-         PNL = PNL+day_m2m
-        #  print("Day M2M:",day_m2m)
-
-         k= k+1
-         
-    while(j< len(ZerodhaApiStore)):
+         Stats[api.getUserID()['uid']]  = day_m2m    
+         return day_m2m
+def CalculateZerodhaPNL(api):
          positions = ZerodhaApiStore[j].positions() 
          net =positions.get("net")
          day =positions.get("day")
@@ -144,8 +140,31 @@ while(True):
          while(i<len(day)):
           day_m2m += day[i].get("pnl")
           i=i+1
-         PNL = PNL + day_m2m
-         j = j+1
+         Stats[api.profile()['user_id']] = day_m2m
+         return day_m2m
+while(True):
+    PNL =0
+    j=0
+    Threads =[]
+    for api in ApiStore:
+        t = threading.Thread(target = CalculateShoonyaPNL , args=[api ])
+
+        #  print("Day M2M:",day_m2m)
+        t.start()
+        # print(Stats)
+
+    
+    # for thread in Threads:
+    #     thread.join()
+    
+    for api in ZerodhaApiStore:
+        t = threading.Thread(target = CalculateZerodhaPNL , args=[api])
+        t.start()
+        # print(Stats)
+
+
+    # while(j< len(ZerodhaApiStore)):
+        
         
     os.system('clear')  
     # print(locale.currency(100.52, grouping=True))
