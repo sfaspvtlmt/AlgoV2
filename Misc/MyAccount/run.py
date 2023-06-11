@@ -22,7 +22,7 @@ Day =None
 
 
 def ConnectApi(Cred):
-    f = open(str("/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/"+Cred["user"])+'.txt', 'r')
+    f = open(str("/home/ec2-user/AlgoV2/Misc/Login/"+Cred["user"])+'.txt', 'r')
     usertoken = f.read()
     global api
     global Day
@@ -49,19 +49,19 @@ def ConnectApi(Cred):
     x = datetime.now().isoweekday()
     # x=1
     if (x == 1):
-        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Monday.json") as f:
+        with open("/home/ec2-user/AlgoV2/Variables/Monday.json") as f:
          Day = json.load(f)
     elif (x == 2):
-        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Tuesday.json") as f:
+        with open("/home/ec2-user/AlgoV2/Variables/Tuesday.json") as f:
          Day = json.load(f)
     elif (x == 3):
-        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Wednesday.json") as f:
+        with open("/home/ec2-user/AlgoV2/Variables/Wednesday.json") as f:
          Day = json.load(f)
     elif (x == 4):
-        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Thursday.json") as f:
+        with open("/home/ec2-user/AlgoV2/Variables/Thursday.json") as f:
          Day = json.load(f)
     elif (x == 5):
-        with open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Friday.json") as f:
+        with open("/home/ec2-user/AlgoV2/Variables/Friday.json") as f:
          Day = json.load(f)
 
 
