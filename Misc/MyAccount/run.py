@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"/AlgoV2/")
+sys.path.append(r"/home/ec2-user/AlgoV2/")
 from Variables import Monday
 import time
 from NorenRestApiPy.NorenApi import NorenApi
