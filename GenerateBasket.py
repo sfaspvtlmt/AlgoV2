@@ -21,7 +21,7 @@ Day = datetime.now().isoweekday()
 # Day =1
 
 if(Day == 1):
-    ltp = (basket.ltp('NSE:NIFTY 50')).get('NSE:NIFTY 50').get('last_price')
+    ltp = (basket.ltp('NSE:NIFTY FIN SERVICE')).get('NSE:NIFTY FIN SERVICE').get('last_price')
     QtySlicer =40
     INDEX = "FINNIFTY"
     month = "6"

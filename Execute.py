@@ -276,7 +276,7 @@ def sl(api, Variables):
         t1 = datetime.datetime.strptime(lastWebsocketTime, "%H:%M:%S")
         delta = t2 - t1
         print(delta.total_seconds())
-        if(delta.total_seconds()>2):
+        if(delta.total_seconds()>5):
                 xd.unsubscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
                 xd.subscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
 

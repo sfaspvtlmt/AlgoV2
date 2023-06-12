@@ -15,8 +15,8 @@ def start():
   
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/LoginAll.py'])
     time.sleep(20)
-    subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount/run.py'])
-    time.sleep(2)
+    # subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount/run.py'])
+    # time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount2/run.py'])
     time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Parag1/run.py'])
