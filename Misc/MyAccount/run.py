@@ -9,13 +9,7 @@ import datetime
 import json
 from datetime import datetime
 import main
-# from Variables import Friday
-# from Variables import Thursday
-# from Variables import Wednesday
-# from Variables import Tuesday
 
-
-# update the user token generated during first script execution
 
 api = None
 Day =None
