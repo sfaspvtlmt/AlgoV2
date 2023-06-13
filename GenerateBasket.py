@@ -104,19 +104,19 @@ elif(Day==2):
 elif(Day==3):
     ltp = (basket.ltp('NSE:NIFTY 50')).get('NSE:NIFTY 50').get('last_price')
     QtySlicer =50
-    i=50
+    i=0
 
     INDEX = "NIFTY"
     month = "6"
-    expiryDate = "08"
-    HedgeStrike=150
+    expiryDate = "15"
+    HedgeStrike=300
     JSONFILE={}
     type1={
         "StopLoss":35,
         "Hour": 9,
         "Min": 44,
         "Seconds": 59,
-        "Type":"NRML",
+        "Type":"MIS",
         "SLType": "TrailToCost"
     }
     type2={
@@ -124,7 +124,7 @@ elif(Day==3):
         "Hour": 10,
         "Min": 29,
         "Seconds": 59,
-        "Type":"NRML",
+        "Type":"MIS",
         "SLType": "TrailToCost"
     }
     type3={
@@ -132,7 +132,7 @@ elif(Day==3):
         "Hour": 11,
         "Min": 29,
         "Seconds": 59,
-        "Type":"NRML",
+        "Type":"MIS",
         "SLType": "TrailToCost"
     }
 elif(Day==4):
@@ -509,8 +509,8 @@ t21= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Harsh['user']
 t22= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Harsh['user']], 0.45, "Harsh2", i ,type2 ])
 t23= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Milan['user_id']], 0.47, "Milan1", 0 ,type1 ])
 t24= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Milan['user_id']], 0.47, "Milan2", i ,type2 ])
-t25= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal1", 0 ,type1 ])
-t26= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal2", i ,type2 ])
+t25= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal1", 0 ,type1 ])
+t26= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal2", i ,type2 ])
 t28= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath1", 0 ,type1 ])
 t29= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath2", i ,type2 ])
 

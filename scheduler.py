@@ -17,6 +17,8 @@ def start():
     time.sleep(20)
     # subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/GenerateBasket.py'])
     # time.sleep(40)
+    subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount1/run.py'])
+    time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount2/run.py'])
     time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Parag1/run.py'])

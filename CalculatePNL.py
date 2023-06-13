@@ -144,6 +144,8 @@ while(True):
          while(i<len(day)):
           day_m2m += day[i].get("pnl")
           i=i+1
+         print(day_m2m)   
+        #  sleep(1)
          PNL = PNL + day_m2m
          j = j+1
         

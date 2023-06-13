@@ -167,7 +167,7 @@ while(True):
         Threads.append(t)
 
 
-    time.sleep(1)
+    time.sleep(4)
     # while(j< len(ZerodhaApiStore)):
     for Thread in Threads:
         Thread.join()
