@@ -10,11 +10,11 @@ from datetime import datetime
 import Cred
 import math
 
-file = open("/Users/crosshair/Documents/GitHub/Algo-Zerodha/Misc/Login/" + Cred.Manjunath["user_id"] + '.txt', 'r')
+file = open("/Users/crosshair/Documents/GitHub/Algo-Zerodha/Misc/Login/" + Cred.Ankit["user_id"] + '.txt', 'r')
 
-Cred.Manjunath['access_token'] = file.read()
-basket = KiteConnect(api_key=Cred.Manjunath["api_key"])
-basket.set_access_token(Cred.Manjunath["access_token"])
+Cred.Ankit['access_token'] = file.read()
+basket = KiteConnect(api_key=Cred.Ankit["api_key"])
+basket.set_access_token(Cred.Ankit["access_token"])
 
 
 Day = datetime.now().isoweekday()
@@ -55,14 +55,14 @@ if(Day == 1):
         "SLType": "Trailing"
     }
 elif(Day==2):
-    ltp = (basket.ltp('NSE:NIFTY 50')).get('NSE:NIFTY 50').get('last_price')
+    ltp = (basket.ltp('NSE:NIFTY FIN SERVICE')).get('NSE:NIFTY FIN SERVICE').get('last_price')
     QtySlicer =40
-    i=50
+    i=0
 
-    INDEX = "NIFTY"
+    INDEX = "FINNIFTY"
     month = "6"
-    expiryDate = "08"
-    HedgeStrike=150
+    expiryDate = "13"
+    HedgeStrike=200
     JSONFILE={}
     type1={
         "StopLoss":35,
@@ -70,7 +70,8 @@ elif(Day==2):
         "Min": 44,
         "Seconds": 59,
         "Type":"NRML",
-        "SLType": "TrailToCost"
+        "SLType": "TrailToCost",
+       
     }
     type2={
         "StopLoss":35,
@@ -78,7 +79,13 @@ elif(Day==2):
         "Min": 29,
         "Seconds": 59,
         "Type":"NRML",
-        "SLType": "TrailToCost"
+        "SLType": "TrailToCost",
+        "Automatic":"True",
+        "CEPrice":0,
+        "PEPrice":0,
+        "CESL":0,
+        "PESL":0,
+        "ATMStrike":0
     }
     type3={
         "StopLoss":35,
@@ -86,7 +93,13 @@ elif(Day==2):
         "Min": 29,
         "Seconds": 59,
         "Type":"NRML",
-        "SLType": "TrailToCost"
+        "SLType": "TrailToCost",
+        "Automatic":"True",
+        "CEPrice":0,
+        "PEPrice":0,
+        "CESL":0,
+        "PESL":0,
+        "ATMStrike":0
     }
 elif(Day==3):
     ltp = (basket.ltp('NSE:NIFTY 50')).get('NSE:NIFTY 50').get('last_price')
@@ -295,7 +308,13 @@ def func(Quantity , Capital , Multiplier, Name , StrikeDiff ,type  ):
     "Min": type['Min'],
     "Seconds": type['Seconds'],
     "Type":type['Type'],
-    "SLType": type['SLType']
+    "SLType": type['SLType'],
+    "Automatic":"True",
+    "CEPrice":0,
+    "PEPrice":0,
+    "CESL":0,
+    "PESL":0,
+    "ATMStrike":0
     }
     print("Best Case Scenario " + "Hedge Qty: " + str(hedgeQty) +" , Qty: " + str(Qty) + " , Margin Required: "+str( basket.basket_order_margins(oldBasket, consider_positions=True, mode=None).get('initial').get('total')) +" Capital " +str(Capital)+" "+Name)
 
@@ -465,35 +484,35 @@ out_file = open("/Users/crosshair/Documents/GitHub/AlgoV2/Variables/Capital.json
 json.dump(CapitalJSON, out_file, indent = 6)
 
 # # Sanam
-t27 = threading.Thread(target = func , args=[200, CapitalJSON[Cred.Sanam['user_id']], 0.47, "Sanam1", 0 ,type1 ])
-t1 = threading.Thread(target = func , args=[200, CapitalJSON[Cred.Sanam['user_id']], 0.47, "Sanam2", i ,type2 ])
-t2 = threading.Thread(target = func , args=[2000, CapitalJSON[Cred.Riyaaz1['user']], 0.91, "Riyaaz1", 0 ,type1 ])
-t3 = threading.Thread(target = func , args=[1200, CapitalJSON[Cred.Riyaaz2['user']], 0.91, "Riyaaz2", i ,type2 ])
-t4 = threading.Thread(target = func , args=[400, CapitalJSON[Cred.Riyaaz3['user']], 0.91, "Riyaaz3", 0 ,type3 ])
+t27 = threading.Thread(target = func , args=[400, CapitalJSON[Cred.Sanam['user_id']], 0.47, "Sanam1", 0 ,type1 ])
+t1 = threading.Thread(target = func , args=[400, CapitalJSON[Cred.Sanam['user_id']], 0.47, "Sanam2", i ,type2 ])
+t2 = threading.Thread(target = func , args=[3000, CapitalJSON[Cred.Riyaaz1['user']], 0.91, "Riyaaz1", 0 ,type1 ])
+t3 = threading.Thread(target = func , args=[2000, CapitalJSON[Cred.Riyaaz2['user']], 0.91, "Riyaaz2", i ,type2 ])
+t4 = threading.Thread(target = func , args=[800, CapitalJSON[Cred.Riyaaz3['user']], 0.91, "Riyaaz3", 0 ,type3 ])
 t5 = threading.Thread(target = func , args=[0, CapitalJSON[Cred.MyAccount['user']], 0.45, "MyAccount", 0 ,type1 ])
 t6 = threading.Thread(target = func , args=[0, CapitalJSON[Cred.MyAccount['user']], 0.45, "MyAccount2", i ,type2 ])
-t7 = threading.Thread(target = func , args=[600, CapitalJSON[Cred.Parag['user']], 0.45, "Parag1", 0 ,type1 ])
-t8 = threading.Thread(target = func , args=[600, CapitalJSON[Cred.Parag['user']], 0.45, "Parag2", i ,type2 ])
-t9 = threading.Thread(target = func , args=[600, CapitalJSON[Cred.Dilip['user']], 0.45, "Dilip1", 0 ,type1 ])
-t10 = threading.Thread(target = func , args=[600, CapitalJSON[Cred.Dilip['user']], 0.45, "Dilip2", i,type2 ])
-t11= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Vijet['user']], 0.45, "Vijet1", 0 ,type1 ])
-t12 = threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Vijet['user']], 0.45, "Vijet2", i ,type2 ])
-t13= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Rajshekhar['user']], 0.45, "Rajshekhar1", 0 ,type1 ])
-t14= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Rajshekhar['user']], 0.45, "Rajshekhar2", i ,type2 ])
-t15= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Sumit['user']], 0.45, "Sumit1", 0 ,type1 ])
-t16= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Sumit['user']], 0.45, "Sumit2", i,type2 ])
-t17= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Rishee['user']], 0.91, "Rishee1", 0 ,type1 ])
-t18= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Rishee2['user']], 0.91, "Rishee2", i ,type2 ])
-t19= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Ankit['user_id']], 0.47, "Ankit1", 0 ,type1 ])
-t20= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Ankit['user_id']], 0.47, "Ankit2", i ,type2 ])
-t21= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Harsh['user']], 0.45, "Harsh1", 0 ,type1 ])
-t22= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Harsh['user']], 0.45, "Harsh2", i ,type2 ])
-t23= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Milan['user_id']], 0.47, "Milan1", 0 ,type1 ])
-t24= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Milan['user_id']], 0.47, "Milan2", i ,type2 ])
-t25= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal1", 0 ,type1 ])
-t26= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal2", i ,type2 ])
-t28= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath1", 0 ,type1 ])
-t29= threading.Thread(target = func , args=[200, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath2", i ,type2 ])
+t7 = threading.Thread(target = func , args=[800, CapitalJSON[Cred.Parag['user']], 0.45, "Parag1", 0 ,type1 ])
+t8 = threading.Thread(target = func , args=[800, CapitalJSON[Cred.Parag['user']], 0.45, "Parag2", i ,type2 ])
+t9 = threading.Thread(target = func , args=[800, CapitalJSON[Cred.Dilip['user']], 0.45, "Dilip1", 0 ,type1 ])
+t10 = threading.Thread(target = func , args=[800, CapitalJSON[Cred.Dilip['user']], 0.45, "Dilip2", i,type2 ])
+t11= threading.Thread(target = func , args=[1200, CapitalJSON[Cred.Vijet['user']], 0.45, "Vijet1", 0 ,type1 ])
+t12 = threading.Thread(target = func , args=[1200, CapitalJSON[Cred.Vijet['user']], 0.45, "Vijet2", i ,type2 ])
+t13= threading.Thread(target = func , args=[1200, CapitalJSON[Cred.Rajshekhar['user']], 0.45, "Rajshekhar1", 0 ,type1 ])
+t14= threading.Thread(target = func , args=[1200, CapitalJSON[Cred.Rajshekhar['user']], 0.45, "Rajshekhar2", i ,type2 ])
+t15= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Sumit['user']], 0.45, "Sumit1", 0 ,type1 ])
+t16= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Sumit['user']], 0.45, "Sumit2", i,type2 ])
+t17= threading.Thread(target = func , args=[800, CapitalJSON[Cred.Rishee['user']], 0.91, "Rishee1", 0 ,type1 ])
+t18= threading.Thread(target = func , args=[600, CapitalJSON[Cred.Rishee2['user']], 0.91, "Rishee2", i ,type2 ])
+t19= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Ankit['user_id']], 0.47, "Ankit1", 0 ,type1 ])
+t20= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Ankit['user_id']], 0.47, "Ankit2", i ,type2 ])
+t21= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Harsh['user']], 0.45, "Harsh1", 0 ,type1 ])
+t22= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Harsh['user']], 0.45, "Harsh2", i ,type2 ])
+t23= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Milan['user_id']], 0.47, "Milan1", 0 ,type1 ])
+t24= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Milan['user_id']], 0.47, "Milan2", i ,type2 ])
+t25= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal1", 0 ,type1 ])
+t26= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal2", i ,type2 ])
+t28= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath1", 0 ,type1 ])
+t29= threading.Thread(target = func , args=[1000, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath2", i ,type2 ])
 
 
 

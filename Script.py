@@ -7,47 +7,82 @@ import Execute
 
 
 def Search(api, Variables):
-    Store.atmStrike = currentStrike.currentStrike(
-        api, Variables["Index"])
-    # Search Scripts and Store them
+    if(Variables['Automatic']=="True"):
+        Store.atmStrike = currentStrike.currentStrike(
+            api, Variables["Index"])
+        # Search Scripts and Store them
 
-    hedgeCE = api.searchscrip("NFO", Variables["Index"] + " " +
-                              str(Store.atmStrike + Variables["HedgeStrike"]) + " CE")
+        hedgeCE = api.searchscrip("NFO", Variables["Index"] + " " +
+                                str(Store.atmStrike + Variables["HedgeStrike"]) + " CE")
 
-    Store.strike['hedgeCE'] = hedgeCE['values'][0]['tsym']
-    Store.token['hedgeCE'] = hedgeCE['values'][0]['token']
+        Store.strike['hedgeCE'] = hedgeCE['values'][0]['tsym']
+        Store.token['hedgeCE'] = hedgeCE['values'][0]['token']
 
-    hedgePE = api.searchscrip("NFO", Variables["Index"] + " " +
-                              str(Store.atmStrike - Variables["HedgeStrike"]) + " PE")
-    Store.strike['hedgePE'] = hedgePE['values'][0]['tsym']
-    Store.token['hedgePE'] = hedgePE['values'][0]['token']
+        hedgePE = api.searchscrip("NFO", Variables["Index"] + " " +
+                                str(Store.atmStrike - Variables["HedgeStrike"]) + " PE")
+        Store.strike['hedgePE'] = hedgePE['values'][0]['tsym']
+        Store.token['hedgePE'] = hedgePE['values'][0]['token']
 
-    CE = api.searchscrip(
-        "NFO", Variables["Index"] + " " + str(Store.atmStrike + Variables["Strike"]) + " CE")
-    Store.strike['CE'] = CE['values'][0]['tsym']
-    Store.token['CE'] = CE['values'][0]['token']
+        CE = api.searchscrip(
+            "NFO", Variables["Index"] + " " + str(Store.atmStrike + Variables["Strike"]) + " CE")
+        Store.strike['CE'] = CE['values'][0]['tsym']
+        Store.token['CE'] = CE['values'][0]['token']
 
-    PE = api.searchscrip(
-        "NFO", Variables["Index"] + " " + str(Store.atmStrike - Variables["Strike"]) + " PE")
-    Store.strike['PE'] = PE['values'][0]['tsym']
-    Store.token['PE'] = PE['values'][0]['token']
+        PE = api.searchscrip(
+            "NFO", Variables["Index"] + " " + str(Store.atmStrike - Variables["Strike"]) + " PE")
+        Store.strike['PE'] = PE['values'][0]['tsym']
+        Store.token['PE'] = PE['values'][0]['token']
 
-    # Storing Price and StopLoss
+        # Storing Price and StopLoss
 
-    res = api.get_quotes("NFO", Store.token['CE'])
-    Store.Price['CE'] = float(res['lp'])
+        res = api.get_quotes("NFO", Store.token['CE'])
+        Store.Price['CE'] = float(res['lp'])
 
-    Store.stopLoss['CE'] = math.ceil(
-        float(res['lp']) * (1 + Variables["StopLoss"]/100))
+        Store.stopLoss['CE'] = math.ceil(
+            float(res['lp']) * (1 + Variables["StopLoss"]/100))
 
-    res = api.get_quotes("NFO", Store.token['PE'])
-    Store.Price['PE'] = float(res['lp'])
-    Store.stopLoss['PE'] = math.ceil(
-        float(res['lp']) * (1 + Variables["StopLoss"]/100))
-    system('clear')
-    
-    
-    
+        res = api.get_quotes("NFO", Store.token['PE'])
+        Store.Price['PE'] = float(res['lp'])
+        Store.stopLoss['PE'] = math.ceil(
+            float(res['lp']) * (1 + Variables["StopLoss"]/100))
+        system('clear')
+        
+    else:
+        Store.atmStrike = Variables['ATMStrike']
+         
+        hedgeCE = api.searchscrip("NFO", Variables["Index"] + " " +
+                                str(Store.atmStrike + Variables["HedgeStrike"]) + " CE")
+
+        Store.strike['hedgeCE'] = hedgeCE['values'][0]['tsym']
+        Store.token['hedgeCE'] = hedgeCE['values'][0]['token']
+
+        hedgePE = api.searchscrip("NFO", Variables["Index"] + " " +
+                                str(Store.atmStrike - Variables["HedgeStrike"]) + " PE")
+        Store.strike['hedgePE'] = hedgePE['values'][0]['tsym']
+        Store.token['hedgePE'] = hedgePE['values'][0]['token']
+
+        CE = api.searchscrip(
+            "NFO", Variables["Index"] + " " + str(Store.atmStrike + Variables["Strike"]) + " CE")
+        Store.strike['CE'] = CE['values'][0]['tsym']
+        Store.token['CE'] = CE['values'][0]['token']
+
+        PE = api.searchscrip(
+            "NFO", Variables["Index"] + " " + str(Store.atmStrike - Variables["Strike"]) + " PE")
+        Store.strike['PE'] = PE['values'][0]['tsym']
+        Store.token['PE'] = PE['values'][0]['token']
+
+        # Storing Price and StopLoss
+
+        # res = api.get_quotes("NFO", Store.token['CE'])
+        Store.Price['CE'] = Variables['CEPrice']
+
+        Store.stopLoss['CE'] = Variables['CESL']
+
+       
+        Store.Price['PE'] = Variables['PEPrice']
+        Store.stopLoss['PE'] = Variables['PESL']
+        system('clear')
+        
 
     print(Store.Price)
     print(Store.stopLoss)

@@ -42,7 +42,7 @@ MyAccount2 = {
 
 Riyaaz1 = {
     "user": "FA85815",
-    "pwd": "Hjkl@6789",
+    "pwd": "1234@Asdf",
     "factor2": pyotp.TOTP('VR5G3423UKO3K2D6D55M7663X2426HD6').now(),
     "vc": "FA85815_U",
     "app_key": "1902eb0d504a69452c59c15d990100a3",

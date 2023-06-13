@@ -6,11 +6,11 @@ Rishee = 0
 
 AnkitBhaiya = 0
 
-Arush = 500000
+Arush = 0
 
-NewClient = 11000000
+NewClient = 18000000
 
-Return = 15
+Return = 20
 
 i =1
 
@@ -26,11 +26,10 @@ while (i<=months):
     
     Rishee = Rishee*(1+0.007*Return)
     
+    
+    
+    Arush =NewClient*(0.003*Return) +Arush*(1+0.01*Return)
     NewClient = NewClient*(1+0.007*Return)
-    
-    
-    Arush = Arush*(1+0.01*Return) + Riyaaz * (0.005*Return) + Rishee * \
-        (0.003*Return) + NewClient*(0.003*Return)
 
     # Arush*(1+0.01*Return) + 
     

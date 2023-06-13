@@ -15,8 +15,8 @@ def start():
   
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/LoginAll.py'])
     time.sleep(20)
-    # subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount/run.py'])
-    # time.sleep(2)
+    # subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/GenerateBasket.py'])
+    # time.sleep(40)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount2/run.py'])
     time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Parag1/run.py'])
@@ -59,7 +59,7 @@ def start():
 
 
 schedule.every().monday.at("09:18").do(start)
-schedule.every().tuesday.at("09:30").do(start)
+schedule.every().tuesday.at("09:28").do(start)
 schedule.every().wednesday.at("09:30").do(start)
 schedule.every().thursday.at("09:30").do(start)
 schedule.every().friday.at("10:00:30").do(start)

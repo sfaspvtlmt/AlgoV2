@@ -18,7 +18,7 @@ def event_handler_order_update(message):
 def event_handler_quote_update(message):
     global lastWebsocketTime
     lastWebsocketTime= datetime.datetime.now().strftime("%H:%M:%S")
-    print(lastWebsocketTime)
+    # print(lastWebsocketTime)
 
     if (Var["Type"] == "MIS"):
         Type = "I"
@@ -270,19 +270,29 @@ def sl(api, Variables):
         now = datetime.datetime.now()
         # lastWebsocketTime= datetime.datetime.now().strftime("%H:%M:%S")
         currentTime = now.strftime("%H:%M:%S")
-        print(currentTime)
-        print(lastWebsocketTime)
+        # print(currentTime)
+        # print(lastWebsocketTime)
         t2 = datetime.datetime.strptime(currentTime, "%H:%M:%S")
         t1 = datetime.datetime.strptime(lastWebsocketTime, "%H:%M:%S")
         delta = t2 - t1
-        print(delta.total_seconds())
-        if(delta.total_seconds()>5):
-                xd.unsubscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
-                xd.subscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
+       
 
 
         while socket_opened:
             os.system('clear')
+            if(delta.total_seconds()>5):
+                print("Dead")
+                # xd.unsubscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
+                
+                # xd.subscribe(["NFO|"+Store.token['CE'], "NFO|"+Store.token['PE']])
+                xd.close_websocket()
+                sleep(2)
+                xd.start_websocket(order_update_callback=event_handler_order_update,
+                       subscribe_callback=event_handler_quote_update, socket_open_callback=open_callback)
+                
+                
+            print(delta.total_seconds())
+
             print(Variables["Name"])
             print(now.hour, ":", now.minute, ":", now.second)
             print(Store.status)

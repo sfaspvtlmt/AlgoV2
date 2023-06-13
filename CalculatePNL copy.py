@@ -1,5 +1,5 @@
 
-
+import json
 import Cred
 from NorenRestApiPy.NorenApi import NorenApi
 from kiteconnect import KiteConnect
@@ -126,9 +126,9 @@ def CalculateShoonyaPNL(api):
           if(day_m2m ==None):
                day_m2m =0
          Stats[api.getUserID()['uid']]  = day_m2m    
-         return day_m2m
+        #  return day_m2m
 def CalculateZerodhaPNL(api):
-         positions = ZerodhaApiStore[j].positions() 
+         positions = api.positions() 
          net =positions.get("net")
          day =positions.get("day")
          i=0
@@ -137,11 +137,13 @@ def CalculateZerodhaPNL(api):
          while(i<len(net)):
           day_m2m += net[i].get("pnl")
           i=i+1
+         
          while(i<len(day)):
           day_m2m += day[i].get("pnl")
           i=i+1
          Stats[api.profile()['user_id']] = day_m2m
-         return day_m2m
+        #  print(api.profile()['user_id'],  day_m2m)
+        #  return day_m2m
 while(True):
     PNL =0
     j=0
@@ -152,6 +154,7 @@ while(True):
         #  print("Day M2M:",day_m2m)
         t.start()
         # print(Stats)
+        Threads.append(t)
 
     
     # for thread in Threads:
@@ -161,15 +164,28 @@ while(True):
         t = threading.Thread(target = CalculateZerodhaPNL , args=[api])
         t.start()
         # print(Stats)
+        Threads.append(t)
 
 
+    time.sleep(1)
     # while(j< len(ZerodhaApiStore)):
-        
-        
+    for Thread in Threads:
+        Thread.join()
+    # time.sleep(1)
     os.system('clear')  
+    # print(Stats)
+    for stat in Stats:
+     PNL = PNL + Stats[stat]
+    out_file = open("/Users/crosshair/Documents/GitHub/AlgoV2/Stats.json", "w")
+
+    json.dump(Stats, out_file, indent = 6)
+
+    # print(PNL)
+    
     # print(locale.currency(100.52, grouping=True))
 
     print("PNL: ",formatINR(PNL*2) , "Capital: ", formatINR((shoonyaCapital + zerodhaCapital)*2) ,round(PNL/(shoonyaCapital + zerodhaCapital)*100,2) ," %")
+    time.sleep(1)
         
         
     

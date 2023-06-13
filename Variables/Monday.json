@@ -28,8 +28,14 @@
             "Hour": 9,
             "Min": 19,
             "Seconds": 59,
-            "Type": "NRML",
-            "SLType": "Trailing"
+            "Type": "MIS",
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":39,
+            "PEPrice":54,
+            "CESL":60,
+            "PESL":80,
+            "ATMStrike":19450
       },
       "Sumit2": {
             "Name": "Sumit2",
@@ -333,7 +339,13 @@
             "Min": 19,
             "Seconds": 59,
             "Type": "NRML",
-            "SLType": "Trailing"
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":39,
+            "PEPrice":54,
+            "CESL":60,
+            "PESL":80,
+            "ATMStrike":19450
       },
       "Milan1": {
             "Name": "Milan1",
@@ -364,8 +376,14 @@
             "Hour": 9,
             "Min": 44,
             "Seconds": 59,
-            "Type": "NRML",
-            "SLType": "Trailing"
+            "Type": "MIS",
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":45.4,
+            "PEPrice":51.65,
+            "CESL":53,
+            "PESL":64,
+            "ATMStrike":19450
       },
       "Rajshekhar2": {
             "Name": "Rajshekhar2",
@@ -381,7 +399,13 @@
             "Min": 44,
             "Seconds": 59,
             "Type": "NRML",
-            "SLType": "Trailing"
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":45.4,
+            "PEPrice":51.65,
+            "CESL":53,
+            "PESL":64,
+            "ATMStrike":19450
       },
       "Rajshekhar1": {
             "Name": "Rajshekhar1",
@@ -397,7 +421,13 @@
             "Min": 19,
             "Seconds": 59,
             "Type": "NRML",
-            "SLType": "Trailing"
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":39,
+            "PEPrice":54,
+            "CESL":60,
+            "PESL":80,
+            "ATMStrike":19450
       },
       "Harsh1": {
             "Name": "Harsh1",
@@ -445,7 +475,13 @@
             "Min": 19,
             "Seconds": 59,
             "Type": "NRML",
-            "SLType": "Trailing"
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":39,
+            "PEPrice":54,
+            "CESL":60,
+            "PESL":80,
+            "ATMStrike":19450
       },
       "Riyaaz2": {
             "Name": "Riyaaz2",
@@ -461,6 +497,12 @@
             "Min": 44,
             "Seconds": 59,
             "Type": "NRML",
-            "SLType": "Trailing"
+            "SLType": "Trailing",
+            "Automatic":"False",
+            "CEPrice":45.4,
+            "PEPrice":51.65,
+            "CESL":53,
+            "PESL":64,
+            "ATMStrike":19450
       }
 }
