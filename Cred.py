@@ -128,6 +128,14 @@ Rahul = {
     "app_key": "39508a48b84c0011c5df218e3f17f20d",
     "imei": "abc1234",
 }
+Joshi = {
+    "user": "FA126459",
+    "pwd": "1234@Qwer",
+    "factor2": pyotp.TOTP('7225V5I6Y26OURSN4SV5MIZC5IFG4J24').now(),
+    "vc": "FA126459_U",
+    "app_key": "c441a43a6b84c34d8434dd6209689483",
+    "imei": "abc1234",
+}
 
 
 # Zerodha 

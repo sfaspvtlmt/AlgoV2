@@ -44,7 +44,6 @@ def ConnectApi(Cred):
     
 
 
-# ConnectApi(Cred.MyAccount)
 ConnectApi(Cred.Sumit)
 ConnectApi(Cred.Harsh)
 ConnectApi(Cred.Sumit)
@@ -55,7 +54,9 @@ ConnectApi(Cred.Dilip)
 ConnectApi(Cred.Riyaaz1)
 ConnectApi(Cred.Riyaaz2)
 ConnectApi(Cred.Riyaaz3)
-
+ConnectApi(Cred.MyAccount)
+ConnectApi(Cred.Joshi)
+ConnectApi(Cred.Rahul)
 ConnectApi(Cred.Rishee2)
 ConnectApi(Cred.Rishee)
 ConnectApi(Cred.Rahul)

@@ -13,11 +13,11 @@ import Cred
 def start():
     print("Monday ON")
   
-    subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/LoginAll.py'])
-    time.sleep(20)
+    # subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/Login/LoginAll.py'])
+    # time.sleep(20)
     # subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/GenerateBasket.py'])
     # time.sleep(40)
-    subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount1/run.py'])
+    subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount/run.py'])
     time.sleep(2)
     subprocess.Popen(["open", r'/Users/crosshair/Documents/GitHub/AlgoV2/Misc/MyAccount2/run.py'])
     time.sleep(2)
@@ -67,10 +67,11 @@ schedule.every().thursday.at("09:30").do(start)
 schedule.every().friday.at("10:00:30").do(start)
 # schedule.every().saturday.at("13:43").do(start)
 # schedule.every().sunday.at("11:59").do(Thursday)
-# start()
+start()
 while 1:
     now = datetime.datetime.now()
     os.system('clear')
     print(now.hour, ":", now.minute, ":", now.second)
     time.sleep(1)
     schedule.run_pending()
+    
