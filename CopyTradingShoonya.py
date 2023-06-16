@@ -5,6 +5,8 @@ import datetime
 from api_helper import ShoonyaApiPy
 import os
 import json
+from NorenRestApiPy.NorenApi import NorenApi
+
 
 # application callbacks
 
@@ -12,13 +14,13 @@ import json
 def event_handler_order_update(message):
    
     print(message)
-    if (message['status'] == "REJECTED"):
+    if (message['status'] == "COMPLETE"):
         res = api2.place_order(buy_or_sell=message['trantype'], product_type=message['pcode'],
                      exchange=message['exch'], tradingsymbol=message['tsym'],
                      quantity=message["qty"], discloseqty=0, price_type='MKT', price=0,
                      trigger_price=None,
                      retention='DAY', remarks='Copied Trade')
-    
+        print(res)
 
 def event_handler_quote_update(message):
     print(message)
@@ -33,12 +35,39 @@ api2 = ShoonyaApiPy()
 
 Credentials = Cred.MyAccount
 Credentials2 = Cred.MyAccount2
+api2.get_limits()
 # make the api call
-ret = api.login(userid=Credentials["user"], password=Credentials["pwd"], twoFA=Credentials["factor2"],
-                vendor_code=Credentials["vc"], api_secret=Credentials["app_key"], imei=Credentials["imei"])
 
-api2.login(userid=Credentials2["user"], password=Credentials2["pwd"], twoFA=Credentials2["factor2"],
-           vendor_code=Credentials2["vc"], api_secret=Credentials2["app_key"], imei=Credentials2["imei"])
+def ConnectApi(Cred):
+    f = open(str("/Users/Arush Sarna/Documents/GitHub/AlgoV2/Misc/Login/"+Cred["user"])+'.txt', 'r')
+    usertoken = f.read()
+   
+    
+
+    try:
+        class ShoonyaApiPy(NorenApi):
+            def __init__(self):
+                NorenApi.__init__(self, host='https://api.shoonya.com/NorenWClientTP/',
+                                  websocket='wss://api.shoonya.com/NorenWSTP/', eodhost='https://api.shoonya.com/chartApi/getdata/')
+
+        xd = ShoonyaApiPy()
+    except Exception as e:
+        class ShoonyaApiPy(NorenApi):
+            def __init__(self):
+                NorenApi.__init__(self, host='https://api.shoonya.com/NorenWClientTP/',
+                                  websocket='wss://api.shoonya.com/NorenWSTP/')
+
+        xd = ShoonyaApiPy()
+        pass
+    xd.get_limits()    
+    login_status = xd.set_session(
+        userid=Cred["user"], password=Cred["pwd"], usertoken=usertoken)
+    return xd
+
+
+api  = ConnectApi(Cred.MyAccount)
+api2  = ConnectApi(Cred.MyAccount2)
+
 def sl(api):
    
     socket_opened=True
