@@ -62,7 +62,7 @@ elif(Day==2):
 
     INDEX = "FINNIFTY"
     month = "6"
-    expiryDate = "13"
+    expiryDate = "20"
     HedgeStrike=200
     JSONFILE={}
     type1={
@@ -143,7 +143,7 @@ elif(Day==4):
 
     INDEX = "NIFTY"
     month = "6"
-    expiryDate = "15"
+    expiryDate = "22"
     HedgeStrike=200
     JSONFILE={}
     type1={
@@ -179,7 +179,7 @@ elif(Day==5):
     INDEX = "FINNIFTY"
     month = "6"
     expiryDate = "20"
-    HedgeStrike=500
+    HedgeStrike=450
     JSONFILE={}
     type1={
         "StopLoss":30,
@@ -187,7 +187,7 @@ elif(Day==5):
         "Min": 29,
         "Seconds": 59,
         "Type":"MIS",
-        "SLType": "Trailing"
+        "SLType": "TrailToCost"
     }
     type2={
         "StopLoss":35,
@@ -515,6 +515,10 @@ t25= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Nirmal['user_i
 t26= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Nirmal['user_id']], 0.47, "Nirmal2", i ,type2 ])
 t28= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath1",j,type1 ])
 t29= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Manjunath['user_id']], 0.47, "Manjunath2", i ,type2 ])
+t30= threading.Thread(target = func , args=[0, CapitalJSON[Cred.Rahul['user']], 0.45, "Rahul1",j,type1 ])
+t31= threading.Thread(target = func , args=[0, CapitalJSON[Cred.Rahul['user']], 0.45, "Rahul2", i ,type2 ])
+t32= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Joshi['user']], 0.45, "Joshi1",j,type1 ])
+t33= threading.Thread(target = func , args=[400, CapitalJSON[Cred.Joshi['user']], 0.45, "Joshi2", i ,type2 ])
 
 
 
@@ -547,6 +551,10 @@ t26.start()
 t27.start()
 t28.start()
 t29.start()
+t30.start()
+t31.start()
+t32.start()
+t33.start()
 
 
 
@@ -580,6 +588,10 @@ t24.join()
 t25.join()
 t28.join()
 t29.join()
+t30.join()
+t31.join()
+t32.join()
+t33.join()
 
 
 
